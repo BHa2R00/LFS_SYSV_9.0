@@ -1,0 +1,12 @@
+if [ ! -f dejagnu-1.6.2.tar.gz ];then
+wget -c http://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.2.tar.gz
+fi
+if [ -f dejagnu-1.6.2.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

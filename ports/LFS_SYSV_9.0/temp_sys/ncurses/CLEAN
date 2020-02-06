@@ -1,0 +1,4 @@
+rm -rf ncurses-6.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

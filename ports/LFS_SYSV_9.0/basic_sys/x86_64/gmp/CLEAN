@@ -1,0 +1,4 @@
+rm -rf gmp-6.1.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

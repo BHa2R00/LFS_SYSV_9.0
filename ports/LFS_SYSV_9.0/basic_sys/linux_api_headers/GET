@@ -1,0 +1,12 @@
+if [ ! -f linux-5.2.8.tar.xz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/linux-5.2.8.tar.xz
+fi
+if [ -f linux-5.2.8.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,4 @@
+rm -rf check-0.12.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

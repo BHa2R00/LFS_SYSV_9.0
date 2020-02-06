@@ -1,0 +1,12 @@
+if [ ! -f procps-ng-3.3.15.tar.xz ];then
+wget -c https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-3.3.15.tar.xz
+fi
+if [ -f procps-ng-3.3.15.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

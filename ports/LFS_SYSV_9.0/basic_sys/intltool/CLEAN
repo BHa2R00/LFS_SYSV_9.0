@@ -1,0 +1,4 @@
+rm -rf intltool-0.51.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

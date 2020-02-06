@@ -1,0 +1,15 @@
+if [ ! -f sysvinit-2.95.tar.xz ];then
+wget -c http://download.savannah.gnu.org/releases/sysvinit/sysvinit-2.95.tar.xz
+fi
+if [ ! -f sysvinit-2.95-consolidated-1.patch ];then
+wget -c http://www.linuxfromscratch.org/patches/lfs/9.0/sysvinit-2.95-consolidated-1.patch
+fi
+if [ -f sysvinit-2.95.tar.xz ]&&[ -f sysvinit-2.95-consolidated-1.patch ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

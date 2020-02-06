@@ -1,0 +1,12 @@
+if [ ! -f libffi-3.2.1.tar.gz ];then
+wget -c ftp://sourceware.org/pub/libffi/libffi-3.2.1.tar.gz
+fi
+if [ -f libffi-3.2.1.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

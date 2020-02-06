@@ -1,0 +1,4 @@
+rm -rf e2fsprogs-1.45.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

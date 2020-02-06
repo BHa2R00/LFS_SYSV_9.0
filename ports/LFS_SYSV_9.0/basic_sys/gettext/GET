@@ -1,0 +1,12 @@
+if [ ! -f gettext-0.20.1.tar.xz ];then
+wget -c http://ftp.gnu.org/gnu/gettext/gettext-0.20.1.tar.xz
+fi
+if [ -f gettext-0.20.1.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

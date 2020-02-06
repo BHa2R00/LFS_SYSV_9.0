@@ -1,0 +1,4 @@
+rm -rf elfutils-0.177
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

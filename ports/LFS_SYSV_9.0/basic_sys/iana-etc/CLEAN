@@ -1,0 +1,4 @@
+rm -rf iana-etc-2.30
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

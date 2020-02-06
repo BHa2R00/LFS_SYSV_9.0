@@ -1,0 +1,12 @@
+if [ ! -f tar-1.32.tar.xz ];then
+wget -c http://ftp.gnu.org/gnu/tar/tar-1.32.tar.xz
+fi
+if [ -f tar-1.32.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

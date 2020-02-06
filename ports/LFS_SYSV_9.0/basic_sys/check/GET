@@ -1,0 +1,12 @@
+if [ ! -f check-0.12.0.tar.gz ];then
+wget -c https://github.com/libcheck/check/releases/download/0.12.0/check-0.12.0.tar.gz
+fi
+if [ -f check-0.12.0.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

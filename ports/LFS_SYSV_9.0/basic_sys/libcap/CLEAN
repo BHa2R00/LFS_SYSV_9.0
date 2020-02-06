@@ -1,0 +1,4 @@
+rm -rf libcap-2.27
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,12 @@
+if [ ! -f zlib-1.2.11.tar.xz ];then
+wget -c https://zlib.net/zlib-1.2.11.tar.xz
+fi
+if [ -f zlib-1.2.11.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

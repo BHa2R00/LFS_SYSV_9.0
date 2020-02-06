@@ -1,0 +1,4 @@
+rm -rf eudev-3.2.8
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf gdbm-1.18.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

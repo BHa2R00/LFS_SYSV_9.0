@@ -1,0 +1,4 @@
+rm -rf wget-1.20.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,74 @@
+# $FreeBSD: releng/11.2/etc/root/dot.cshrc 278616 2015-02-12 05:35:00Z cperciva $
+#
+# .cshrc - csh resource script, read at beginning of execution by each shell
+#
+# see also csh(1), environ(7).
+# more examples available at /usr/share/examples/csh/
+#
+
+alias h		history 25
+alias j		jobs -l
+alias la	ls -aF
+alias lf	ls -FA
+alias ll	ls -ltrAF
+
+# A righteous umask
+umask 22
+
+set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin)
+
+setenv	EDITOR	vi
+setenv	PAGER	more
+setenv	BLOCKSIZE	K
+
+if ($?prompt) then
+	if ( -r "/etc/DIR_COLORS" ) then
+		if ( $?TERM ) then
+			set colour = `"/bin/egrep" "^TERM ${TERM}"'$' "/etc/DIR_COLORS"`
+		endif
+	endif
+	# An interactive shell -- set some stuff up
+#	set prompt = "%N@%m:%~ %# "
+#	set prompt = "(%m:%c3) %# "
+	set promptchars = "%#"
+
+	if ( $?colour ) then
+		if ( "$uid" == "0" ) then
+			set prompt = "%{\033[0;1;34m%}(%{\033[0;1;31m%}%m%{\033[0m%}:%{\033[0;1;34m%}%c3%{\033[0;1;34m%}) %{\033[0;1;31m%}%#%{\033[0m%} "
+		else
+			set prompt = "%{\033[0;1;34m%}(%{\033[0;1;32m%}%m%{\033[0m%}:%{\033[0;1;34m%}%c3%{\033[0;1;34m%}) %{\033[0;1;32m%}%n%{\033[0;1;32m%}%#%{\033[0m%} "
+		endif
+
+		# Enable colours for ls, etc.  Prefer ~/.dir_colors
+		if ( -f "${HOME}"/.dir_colors ) then
+			eval `"/usr/bin/dircolors" -c "${HOME}"/.dir_colors`
+		else if ( -f "/etc/DIR_COLORS" ) then
+			eval `"/usr/bin/dircolors" -c "/etc/DIR_COLORS"`
+		endif
+
+#		alias ls 'ls --color=auto'
+#		alias grep 'grep --color=auto'
+	else
+		if ( "$uid" == "0" ) then
+			set prompt = "(%m:%c1) %# "
+		else
+			set prompt = "(%m:%c1) %n%# "
+		endif
+	endif
+	unset colour
+
+	set filec
+	set history = 1000
+	set savehist = (1000 merge)
+	set autolist = ambiguous
+	# Use history to aid expansion
+	set autoexpand
+	set autorehash
+	set mail = (/var/mail/$USER)
+	if ( $?tcsh ) then
+		bindkey "^W" backward-delete-word
+		bindkey -k up history-search-backward
+		bindkey -k down history-search-forward
+	endif
+
+endif

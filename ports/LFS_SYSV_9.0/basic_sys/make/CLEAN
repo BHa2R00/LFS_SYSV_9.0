@@ -1,0 +1,4 @@
+rm -rf make-4.2.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

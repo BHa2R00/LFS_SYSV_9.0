@@ -1,0 +1,4 @@
+rm -rf texinfo-6.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

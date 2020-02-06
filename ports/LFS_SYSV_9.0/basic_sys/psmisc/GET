@@ -1,0 +1,12 @@
+if [ ! -f psmisc-23.2.tar.xz ];then
+wget -c https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.2.tar.xz
+fi
+if [ -f psmisc-23.2.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

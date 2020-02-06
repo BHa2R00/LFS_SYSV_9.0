@@ -1,0 +1,12 @@
+if [ ! -f util-linux-2.34.tar.xz ];then
+wget -c https://www.kernel.org/pub/linux/utils/util-linux/v2.34/util-linux-2.34.tar.xz
+fi
+if [ -f util-linux-2.34.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

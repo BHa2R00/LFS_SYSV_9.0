@@ -1,0 +1,4 @@
+rm -rf less-551
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

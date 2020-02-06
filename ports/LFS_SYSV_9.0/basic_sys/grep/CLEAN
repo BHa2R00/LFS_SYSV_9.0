@@ -1,0 +1,4 @@
+rm -rf grep-3.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

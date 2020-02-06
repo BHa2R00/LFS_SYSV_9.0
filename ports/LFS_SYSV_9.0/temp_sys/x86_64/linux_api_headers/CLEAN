@@ -1,0 +1,4 @@
+rm -rf linux-5.2.8
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

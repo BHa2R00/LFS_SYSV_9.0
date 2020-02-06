@@ -1,0 +1,9 @@
+#!/bin/sh
+cmd='(port-pkg2'
+for argv in "$@"
+do
+	cmd=$cmd' "'$argv'"'
+done
+cmd=$cmd')'
+echo $cmd | sbcl --noinform --no-sysinit --no-userinit --load ports.lisp
+echo ''

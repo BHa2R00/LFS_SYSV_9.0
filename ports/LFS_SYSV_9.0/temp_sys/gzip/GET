@@ -1,0 +1,12 @@
+if [ ! -f gzip-1.10.tar.xz ];then
+wget -c http://ftp.gnu.org/gnu/gzip/gzip-1.10.tar.xz
+fi
+if [ -f gzip-1.10.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

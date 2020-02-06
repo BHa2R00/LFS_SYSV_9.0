@@ -1,0 +1,4 @@
+rm -rf coreutils-8.31
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

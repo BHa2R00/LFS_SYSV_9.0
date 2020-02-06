@@ -1,0 +1,4 @@
+rm -rf tcsh-6.21.00
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

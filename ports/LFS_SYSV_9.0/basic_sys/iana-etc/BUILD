@@ -1,0 +1,13 @@
+if [ -f iana-etc-2.30.tar.bz2 ];then
+tar xf iana-etc-2.30.tar.bz2
+cd iana-etc-2.30
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

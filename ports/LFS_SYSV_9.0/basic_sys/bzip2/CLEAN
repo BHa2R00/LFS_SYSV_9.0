@@ -1,0 +1,4 @@
+rm -rf bzip2-1.0.8
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

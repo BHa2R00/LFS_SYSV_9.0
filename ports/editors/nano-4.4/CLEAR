@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{nano,rnano}
+rm -rfv $PORTS_DEST/share/nano
+rm -rfv $PORTS_DEST/share/doc/nano-4.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

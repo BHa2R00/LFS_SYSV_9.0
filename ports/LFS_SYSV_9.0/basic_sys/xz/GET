@@ -1,0 +1,12 @@
+if [ ! -f xz-5.2.4.tar.xz ];then
+wget -c https://tukaani.org/xz/xz-5.2.4.tar.xz
+fi
+if [ -f xz-5.2.4.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

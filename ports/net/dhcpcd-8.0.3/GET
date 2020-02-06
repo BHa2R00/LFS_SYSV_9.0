@@ -1,0 +1,13 @@
+if [ ! -f dhcpcd-8.0.3.tar.xz ];then
+wget -c https://roy.marples.name/downloads/dhcpcd/dhcpcd-8.0.3.tar.xz
+#wget -c ftp://roy.marples.name/pub/dhcpcd/dhcpcd-8.0.3.tar.xz
+fi
+if [ -f dhcpcd-8.0.3.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

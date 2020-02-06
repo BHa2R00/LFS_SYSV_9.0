@@ -1,0 +1,4 @@
+rm -rf sysvinit-2.95
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf patch-2.7.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

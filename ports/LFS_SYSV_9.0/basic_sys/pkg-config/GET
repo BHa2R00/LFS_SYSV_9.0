@@ -1,0 +1,12 @@
+if [ ! -f pkg-config-0.29.2.tar.gz ];then
+wget -c https://pkg-config.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
+fi
+if [ -f pkg-config-0.29.2.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

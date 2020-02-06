@@ -1,0 +1,4 @@
+rm -rf openssh-8.0p1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

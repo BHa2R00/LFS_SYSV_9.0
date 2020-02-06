@@ -1,0 +1,4 @@
+rm -rf iproute2-5.2.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf man-db-2.8.6.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,1 @@
+echo $1 | /bin/sh | tee $2

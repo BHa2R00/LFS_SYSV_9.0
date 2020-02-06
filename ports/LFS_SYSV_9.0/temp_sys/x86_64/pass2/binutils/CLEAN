@@ -1,0 +1,4 @@
+rm -rf {build,binutils-2.32}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

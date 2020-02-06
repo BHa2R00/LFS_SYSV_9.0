@@ -1,0 +1,12 @@
+if [ ! -f acl-2.2.53.tar.gz ];then
+wget -c http://download.savannah.gnu.org/releases/acl/acl-2.2.53.tar.gz
+fi
+if [ -f acl-2.2.53.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

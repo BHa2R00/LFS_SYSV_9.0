@@ -1,0 +1,12 @@
+if [ ! -f perl-5.30.0.tar.xz ];then
+wget -c https://www.cpan.org/src/5.0/perl-5.30.0.tar.xz
+fi
+if [ -f perl-5.30.0.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

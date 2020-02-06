@@ -1,0 +1,4 @@
+rm -rf p7zip_16.02
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

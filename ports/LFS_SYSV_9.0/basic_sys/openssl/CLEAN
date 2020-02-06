@@ -1,0 +1,4 @@
+rm -rf openssl-1.1.1c
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

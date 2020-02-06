@@ -1,0 +1,4 @@
+rm -rf grub-2.04
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

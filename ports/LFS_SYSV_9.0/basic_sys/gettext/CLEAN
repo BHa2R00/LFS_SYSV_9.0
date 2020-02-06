@@ -1,0 +1,4 @@
+rm -rf gettext-0.20.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf procps-ng-3.3.15
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

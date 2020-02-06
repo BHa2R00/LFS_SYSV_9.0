@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{7z,7za,7zr}
+rm -rfv $PORTS_DEST/lib/p7zip
+rm -rfv $PORTS_DEST/share/doc/p7zip-16.02
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

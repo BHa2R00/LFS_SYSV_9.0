@@ -1,0 +1,12 @@
+if [ ! -f grub-2.04.tar.xz ];then
+wget -c https://ftp.gnu.org/gnu/grub/grub-2.04.tar.xz
+fi
+if [ -f grub-2.04.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

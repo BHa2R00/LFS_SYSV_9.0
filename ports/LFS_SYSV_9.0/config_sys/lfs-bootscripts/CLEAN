@@ -1,0 +1,4 @@
+rm -rf lfs-bootscripts-20190524
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,12 @@
+if [ ! -f m4-1.4.18.tar.xz ];then
+wget -c http://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz
+fi
+if [ -f m4-1.4.18.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

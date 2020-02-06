@@ -1,0 +1,4 @@
+rm -rf diffutils-3.7
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

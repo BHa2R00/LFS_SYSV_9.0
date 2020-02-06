@@ -1,0 +1,12 @@
+if [ ! -f flex-2.6.4.tar.gz ];then
+wget -c https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz
+fi
+if [ -f flex-2.6.4.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

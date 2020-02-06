@@ -1,0 +1,15 @@
+if [ ! -f bzip2-1.0.8.tar.gz ];then
+wget -c https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
+fi
+if [ ! -f bzip2-1.0.8-install_docs-1.patch ];then
+wget -c http://www.linuxfromscratch.org/patches/lfs/9.0/bzip2-1.0.8-install_docs-1.patch
+fi
+if [ -f bzip2-1.0.8.tar.gz ]&&[ -f bzip2-1.0.8-install_docs-1.patch ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi
