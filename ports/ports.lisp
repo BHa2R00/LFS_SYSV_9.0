@@ -127,8 +127,8 @@ export PORTS_TGT=~A
       (let ((r (apply 'port-pkg (append (list "T" path) cmd))))
 	(if r
 	  r
-	  ;(port-pkg1 path)
-	  'INSTALLED
+	  (port-pkg1 path)
+	  ;'INSTALLED
 	  ))))))
 
 (defun port-pkg2 (path &rest cmd)

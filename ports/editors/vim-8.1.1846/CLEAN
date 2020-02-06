@@ -1,0 +1,4 @@
+rm -rf vim-8.1.1846
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

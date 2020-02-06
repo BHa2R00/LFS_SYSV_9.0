@@ -1,0 +1,4 @@
+rm -rf acl-2.2.53
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

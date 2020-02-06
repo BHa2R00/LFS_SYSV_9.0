@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{ex,rview,rvim,vi,view,vim,vimdiff,vimtutor,xxd}
+rm -rfv $PORTS_DEST/share/vim
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
