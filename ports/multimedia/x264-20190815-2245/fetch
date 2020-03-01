@@ -1,0 +1,12 @@
+if [ ! -f x264-snapshot-20190815-2245-stable.tar.bz2 ];then
+wget -c https://download.videolan.org/x264/snapshots/x264-snapshot-20190815-2245-stable.tar.bz2 --no-check-certificate
+fi
+if [ -f x264-snapshot-20190815-2245-stable.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

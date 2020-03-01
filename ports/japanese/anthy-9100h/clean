@@ -1,0 +1,4 @@
+rm -rf anthy-9100h
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf scrot-0.8
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

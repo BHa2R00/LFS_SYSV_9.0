@@ -1,0 +1,4 @@
+rm -rf nspr-4.21
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

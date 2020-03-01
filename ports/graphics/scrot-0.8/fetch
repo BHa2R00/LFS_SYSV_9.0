@@ -1,0 +1,12 @@
+if [ ! -f scrot_0.8.orig.tar.gz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/scrot_0.8.orig.tar.gz --no-check-certificate
+fi
+if [ -f scrot_0.8.orig.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

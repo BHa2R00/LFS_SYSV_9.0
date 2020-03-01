@@ -1,0 +1,10 @@
+rm -rfv $PORTS_DEST/bin/{xml2-config,xmlcatalog,xmllint}
+rm -rfv $PORTS_DEST/lib/{libxml2.so,libxml2mod.so}
+rm -rfv $PORTS_DEST/include/libxml2
+rm -rfv $PORTS_DEST/lib/cmake/libxml2
+rm -rfv $PORTS_DEST/share/doc/libxml2-2.9.9
+rm -rfv $PORTS_DEST/share/doc/libxml2-python-2.9.9
+rm -rfv $PORTS_DEST/share/gtk-doc/html/libxml2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

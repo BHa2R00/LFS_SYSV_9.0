@@ -1,0 +1,14 @@
+if [ -f libtasn1-4.14.tar.gz ];then
+tar xf libtasn1-4.14.tar.gz
+cd libtasn1-4.14
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

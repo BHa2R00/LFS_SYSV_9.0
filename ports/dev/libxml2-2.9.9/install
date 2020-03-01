@@ -1,0 +1,17 @@
+if [ -f libxml2-2.9.9.tar.gz ];then
+tar xf libxml2-2.9.9.tar.gz
+cd libxml2-2.9.9
+./configure --prefix=$PORTS_DEST \
+            --disable-static \
+            --with-history   \
+            --with-python=$PORTS_DEST/bin/python3
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

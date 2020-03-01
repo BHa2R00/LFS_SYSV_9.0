@@ -1,0 +1,4 @@
+rm -rf libtasn1-4.14
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

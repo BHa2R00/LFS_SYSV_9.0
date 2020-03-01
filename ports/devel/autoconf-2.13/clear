@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{autoconf2.13,autoheader2.13,autoreconf2.13,autoscan2.13,autoupdate2.13,ifnames2.13}
+rm -rfv $PORTS_DEST/share/autoconf-2.13
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

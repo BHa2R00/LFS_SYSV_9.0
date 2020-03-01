@@ -1,0 +1,4 @@
+rm -rf libva-2.5.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

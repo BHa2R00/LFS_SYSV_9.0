@@ -1,0 +1,12 @@
+if [ ! -f usbutils-012.tar.xz ];then
+wget -c https://www.kernel.org/pub/linux/utils/usb/usbutils/usbutils-012.tar.xz --no-check-certificate
+fi
+if [ -f usbutils-012.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

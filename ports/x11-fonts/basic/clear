@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{bdftruncate,ucs2any}
+rm -rfv $PORTS_DEST/share/fonts
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

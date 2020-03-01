@@ -1,0 +1,4 @@
+rm -rf ffmpeg-4.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

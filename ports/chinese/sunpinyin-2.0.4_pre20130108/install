@@ -1,0 +1,13 @@
+if [ -f sunpinyin-2.0.4_pre20130108.tar.xz ];then
+tar xf sunpinyin-2.0.4_pre20130108.tar.xz
+cd sunpinyin-2.0.4_pre20130108
+scons --prefix=$PORTS_DEST
+scons --prefix=$PORTS_DEST install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

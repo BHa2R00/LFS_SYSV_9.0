@@ -1,0 +1,14 @@
+if [ -f cairo-1.16.0.tar.xz ];then
+tar xf cairo-1.16.0.tar.xz
+cd cairo-1.16.0
+./configure --prefix=$PORTS_DEST --disable-static --enable-tee
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

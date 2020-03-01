@@ -1,0 +1,9 @@
+cp -v mkinitramfs /sbin/
+chmod 0755 /sbin/mkinitramfs
+mkdir -p $PORTS_DEST/share/mkinitramfs
+cp -v init.in $PORTS_DEST/share/mkinitramfs/
+echo 'To build an initramfs, run the following as the root user:'
+echo 'mkinitramfs [KERNEL VERSION]'
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

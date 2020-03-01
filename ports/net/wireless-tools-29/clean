@@ -1,0 +1,4 @@
+rm -rf wireless_tools.29
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/lib/libblas.{a,so}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

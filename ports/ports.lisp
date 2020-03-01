@@ -3,7 +3,7 @@
 ;(defparameter *target* "x86_64-lfs-linux-gnu")
 (defparameter *dest-dir* "/usr/")
 ;(defparameter *dest-dir* "/mnt/dest/")
-(defparameter *make-jobs* 20)
+(defparameter *make-jobs* 5)
 (defparameter *echo* nil)
 
 (defparameter *path* (list "/bin/" "/sbin/" "/usr/bin/" "/usr/sbin/" "/usr/local/bin/" "/usr/local/sbin/" "/tools/bin/"))
@@ -84,8 +84,8 @@ export PORTS_TGT=~A
 	      *make-jobs*
 	      *target*))
       (with-fp-w so state_file (format so "NIL"))
-    (map 'list
-	 (lambda (file)
+    ;(map 'list (lambda (file)
+    (dolist (file cmd)
 	   (format t "~%;;~A~%" (string+ (code-char 27) "[33m" "SHELL " path "/" file (code-char 27) "[0m"))
 	   (let*((egrep_error_file (string+ path "/" file "_EGREP_CHECK"))
 		 (egrep_error_file-p (probe-file egrep_error_file))
@@ -95,7 +95,9 @@ export PORTS_TGT=~A
 	       (let ()
 		 (format t "~%;;~A~%" (string+ (code-char 27) "[31m" "cat " state_file (code-char 27) "[0m"))
 		 (if egrep_error_file-p
-		   (sh-run t (string+ "cat " state_file " | egrep -w --color '" error-rgl "'"))nil))
+		   (let ()
+		     (sh-run t (string+ "cat " state_file " | egrep -w --color '" error-rgl "'")))nil)
+		 (setf r state))
 	       (let ()
 		 (with-fp-w so log_file (format so "~%"))
 		 (sh-run-with-log (read-from-string echo-str) t (string+ str1 " && sh " file) log_file)
@@ -108,15 +110,16 @@ export PORTS_TGT=~A
 		       (with-fp-w so state_file (format so "~S" str2))
 		       (setf r (or str2 r)))))
 		 (format t "")
-		 (exec t "rm" log_file)))))
-	 cmd)
+		 (exec t "rm" log_file))))
+	   )
+	   ;)cmd)
     (exec t "rm" shrc)
     (exec t "rm" state_file)
     r))
 
 (defun port-pkg1 (path &rest cmd)
   (format t "~%;;~C[33mPORT-PKG1 ~A ~A ~C[0m~%" (code-char 27) path cmd (code-char 27))
-  (if (string= (car cmd) "REINSTALL")
+  (if (string= (car cmd) "reinstall")
     (let ((r (apply 'port-pkg (append (list "T" path) (cdr cmd)))))
       (if r r 'INSTALLED))
   (let*((installed_file (string+ path "/INSTALLED.lisp"))
@@ -127,16 +130,21 @@ export PORTS_TGT=~A
       (let ((r (apply 'port-pkg (append (list "T" path) cmd))))
 	(if r
 	  r
+	  ;(apply 'port-pkg1 (append (list path) cmd))
 	  (port-pkg1 path)
 	  ;'INSTALLED
 	  ))))))
 
 (defun port-pkg2 (path &rest cmd)
   (format t "~%;;~C[33mPORT-PKG2 ~A ~A ~C[0m~%" (code-char 27) path cmd (code-char 27))
+  (if (directory path)
   (let*((depend_file (string+ path "/DEPEND.lisp"))
 	(depends (if (probe-file depend_file) (with-fp-r fi depend_file (read fi)) nil))
 	(depends-r (if depends (map 'list (lambda (pkg) (eql (apply 'port-pkg2 (append (list pkg) cmd)) 'INSTALLED)) depends) nil))
 	(r-depends (if depends-r (eval(append '(and) depends-r)) t))
 	(r (if r-depends (apply 'port-pkg1 (append (list path) cmd)) 'INSTALL_DEPEND-ERROR)))
     (format t "~%;;~C[33mINSTALL_DEPEND~C[0m~%~S~%" (code-char 27) (code-char 27) (map 'list (lambda (pkg pkg-r) (list pkg pkg-r)) depends depends-r)) 
-    r))
+    r)
+  (let ()
+    (format t "~%;;~C[31mPKG-NIL~C[0m~%" (code-char 27) (code-char 27))
+    'PKG-NIL)))

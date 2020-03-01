@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{ffmpeg,ffplay,ffprobe,ffserver,qt-faststart}
+rm -rfv $PORTS_DEST/lib/{libav{codec,device,filter,format,util}.so,libpostproc.so,libswresample.so,libswscale.so}
+rm -rfv $PORTS_DEST/include/{libav{codec,device,filter,format,util},libpostproc}
+rm -rfv $PORTS_DEST/share/{doc/ffmpeg-4.2,ffmpeg}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libmenu-cache.so
+rm -rfv $PORTS_DEST/{include,libexec,share/gtk-doc/html}/menu-cache
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

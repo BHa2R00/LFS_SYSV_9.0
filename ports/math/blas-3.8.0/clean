@@ -1,0 +1,4 @@
+rm -rf BLAS-3.8.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

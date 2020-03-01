@@ -1,0 +1,13 @@
+if [ ! -f gnupg-2.2.17.tar.bz2 ];then
+wget -c https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.17.tar.bz2 --no-check-certificate
+#wget -c ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-2.2.17.tar.bz2 --no-check-certificate
+fi
+if [ -f gnupg-2.2.17.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,19 @@
+if [ -f libtirpc-1.1.4.tar.bz2 ];then
+tar xf libtirpc-1.1.4.tar.bz2
+cd libtirpc-1.1.4
+./configure --prefix=$PORTS_DEST                                   \
+            --sysconfdir=/etc                               \
+            --disable-static                                \
+            --disable-gssapi
+make $PORTS_JOBS
+make install
+mv -v $PORTS_DEST/lib/libtirpc.so.* /lib
+ln -sfv /lib/libtirpc.so.3.0.0 $PORTS_DEST/lib/libtirpc.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

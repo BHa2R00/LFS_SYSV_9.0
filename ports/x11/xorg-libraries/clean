@@ -1,0 +1,4 @@
+#rm -rf lib
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

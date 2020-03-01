@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{lua52,luac52}
+rm -rfv $PORTS_DEST/lib/{liblua5.2.so,lua/5.2}
+rm -rfv $PORTS_DEST/include/lua5.2
+rm -rfv $PORTS_DEST/share/{doc/lua-5.2.4,lua/5.2}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

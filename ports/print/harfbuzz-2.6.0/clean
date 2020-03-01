@@ -1,0 +1,4 @@
+rm -rf harfbuzz-2.6.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

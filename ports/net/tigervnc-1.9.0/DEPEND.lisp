@@ -1,0 +1,10 @@
+(
+ "devel/cmake-3.15.2/"
+ "x11-toolkits/fltk-1.3.5/"
+ "security/gnutls-3.6.9/"
+ "security/libgcrypt-1.8.5/"
+ "graphics/libjpeg-turbo-2.0.2/"
+ "x11/pixman-0.38.4/"
+ "x11/xorg-apps/"
+ "x11-fonts/legacy/"
+ )

@@ -1,0 +1,5 @@
+rm -rf elogind-241.3
+rm -rf blfs-bootscripts-20190609
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

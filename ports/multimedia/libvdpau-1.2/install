@@ -1,0 +1,17 @@
+if [ -f libvdpau-1.2.tar.bz2 ];then
+tar xf libvdpau-1.2.tar.bz2
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+cd libvdpau-1.2
+./configure $XORG_CONFIG --docdir=$PORTS_DEST/share/doc/libvdpau-1.2
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

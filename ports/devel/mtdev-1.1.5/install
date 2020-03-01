@@ -1,0 +1,14 @@
+if [ -f mtdev-1.1.5.tar.bz2 ];then
+tar xf mtdev-1.1.5.tar.bz2
+cd mtdev-1.1.5
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

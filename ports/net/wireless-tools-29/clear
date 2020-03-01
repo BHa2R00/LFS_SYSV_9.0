@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{ifrename,iwconfig,iwevent,iwgetid,iwlist,iwpriv,iwspy}
+rm -rfv $PORTS_DEST/lib/libiw.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

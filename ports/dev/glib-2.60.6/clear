@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{gapplication,gdbus,gdbus-codegen,gio,gio-launch-desktop,gio-querymodules,glib-compile-resources,glib-compile-schemas,glib-genmarshal,glib-gettextize,glib-mkenums,gobject-query,gresource,gsettings,gtester,gtester-report}
+rm -rfv $PORTS_DEST/lib/{libgio-2.0.so,libglib-2.0.so,libgmodule-2.0.so,libgobject-2.0.so,libgthread-2.0.so,glib-2.0}
+rm -rfv $PORTS_DEST/include/{gio-unix-2.0,glib-2.0}
+rm -rfv $PORTS_DEST/share/{glib-2.0,gtk-doc/html/{gio,glib,gobject}}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf libnsl-1.2.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

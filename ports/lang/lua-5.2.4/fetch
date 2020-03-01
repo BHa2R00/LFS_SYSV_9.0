@@ -1,0 +1,15 @@
+if [ ! -f lua-5.2.4.tar.gz ];then
+wget -c http://www.lua.org/ftp/lua-5.2.4.tar.gz --no-check-certificate
+fi
+if [ ! -f lua-5.2.4-shared_library-1.patch ];then
+wget -c http://www.linuxfromscratch.org/patches/blfs/9.0/lua-5.2.4-shared_library-1.patch --no-check-certificate
+fi
+if [ -f lua-5.2.4.tar.gz ]&&[ -f lua-5.2.4-shared_library-1.patch ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

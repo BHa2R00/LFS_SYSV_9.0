@@ -1,0 +1,4 @@
+rm -rf twm-1.0.10
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

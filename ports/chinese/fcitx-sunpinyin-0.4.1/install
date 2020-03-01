@@ -1,0 +1,16 @@
+if [ -f fcitx-sunpinyin-0.4.1.tar.xz ];then
+tar xf fcitx-sunpinyin-0.4.1.tar.xz
+cd fcitx-sunpinyin-0.4.1
+mkdir build &&
+cd build &&
+cmake -DCMAKE_INSTALL_PREFIX=$PORTS_DEST ..
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

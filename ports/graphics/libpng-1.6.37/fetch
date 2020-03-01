@@ -1,0 +1,15 @@
+if [ ! -f libpng-1.6.37.tar.xz ];then
+wget -c https://downloads.sourceforge.net/libpng/libpng-1.6.37.tar.xz --no-check-certificate
+fi
+if [ ! -f libpng-1.6.37-apng.patch.gz ];then
+wget -c https://downloads.sourceforge.net/sourceforge/libpng-apng/libpng-1.6.37-apng.patch.gz --no-check-certificate
+fi
+if [ -f libpng-1.6.37.tar.xz ]&&[ -f libpng-1.6.37-apng.patch.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

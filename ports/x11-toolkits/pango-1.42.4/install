@@ -1,0 +1,16 @@
+if [ -f pango-1.42.4.tar.xz ];then
+tar xf pango-1.42.4.tar.xz
+cd pango-1.42.4
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST --sysconfdir=/etc ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../../R
+fi

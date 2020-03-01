@@ -1,0 +1,32 @@
+if [ -f tcl8.6.9-src.tar.gz ];then
+tar xf tcl8.6.9-src.tar.gz
+cd tcl8.6.9
+export SRCDIR=`pwd`
+cd unix
+./configure --prefix=$PORTS_DEST --mandir=$PORTS_DEST/share/man $([ $(uname -m) = x86_64 ] && echo --enable-64bit)
+make $PORTS_JOBS
+sed -e "s#$SRCDIR/unix#$PORTS_DEST/lib#" \
+    -e "s#$SRCDIR#$PORTS_DEST/include#"  \
+    -i tclConfig.sh               &&
+sed -e "s#$SRCDIR/unix/pkgs/tdbc1.1.0#$PORTS_DEST/lib/tdbc1.1.0#" \
+    -e "s#$SRCDIR/pkgs/tdbc1.1.0/generic#$PORTS_DEST/include#"    \
+    -e "s#$SRCDIR/pkgs/tdbc1.1.0/library#$PORTS_DEST/lib/tcl8.6#" \
+    -e "s#$SRCDIR/pkgs/tdbc1.1.0#$PORTS_DEST/include#"            \
+    -i pkgs/tdbc1.1.0/tdbcConfig.sh                        &&
+sed -e "s#$SRCDIR/unix/pkgs/itcl4.1.2#$PORTS_DEST/lib/itcl4.1.2#" \
+    -e "s#$SRCDIR/pkgs/itcl4.1.2/generic#$PORTS_DEST/include#"    \
+    -e "s#$SRCDIR/pkgs/itcl4.1.2#$PORTS_DEST/include#"            \
+    -i pkgs/itcl4.1.2/itclConfig.sh                        &&
+unset SRCDIR
+make install
+make install-private-headers
+ln -v -sf tclsh8.6 $PORTS_DEST/bin/tclsh
+chmod -v 755 $PORTS_DEST/lib/libtcl8.6.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libfdk-aac.so
+rm -rfv $PORTS_DEST/include/fdk-aac
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

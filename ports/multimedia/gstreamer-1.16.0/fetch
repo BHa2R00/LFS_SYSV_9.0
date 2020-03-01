@@ -1,0 +1,15 @@
+if [ ! -f gstreamer-1.16.0.tar.xz ];then
+wget -c https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.16.0.tar.xz --no-check-certificate
+fi
+if [ ! -f gstreamer-1.16.0-buffer_size_reset_fix-1.patch ];then
+wget -c http://www.linuxfromscratch.org/patches/blfs/9.0/gstreamer-1.16.0-buffer_size_reset_fix-1.patch --no-check-certificate
+fi
+if [ -f gstreamer-1.16.0.tar.xz ]&&[ -f gstreamer-1.16.0-buffer_size_reset_fix-1.patch ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,16 @@
+if [ -f pixman-0.38.4.tar.gz ];then
+tar xf pixman-0.38.4.tar.gz
+cd pixman-0.38.4
+mkdir build &&
+cd build &&
+../configure --prefix=$PORTS_DEST --disable-gtk
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

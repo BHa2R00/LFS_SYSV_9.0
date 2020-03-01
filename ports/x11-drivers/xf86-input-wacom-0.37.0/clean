@@ -1,0 +1,4 @@
+rm -rf xf86-input-wacom-0.37.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

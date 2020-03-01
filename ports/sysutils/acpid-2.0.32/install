@@ -1,0 +1,16 @@
+if [ -f acpid-2.0.32.tar.xz ];then
+tar xf acpid-2.0.32.tar.xz
+cd acpid-2.0.32
+./configure --prefix=$PORTS_DEST --docdir=$PORTS_DEST/share/doc/acpid-2.0.32
+make $PORTS_JOBS
+make install
+install -v -m755 -d /etc/acpi/events &&
+cp -r samples $PORTS_DEST/share/doc/acpid-2.0.32
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

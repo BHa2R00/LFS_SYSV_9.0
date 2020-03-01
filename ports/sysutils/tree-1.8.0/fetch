@@ -1,0 +1,12 @@
+if [ ! -f tree-1.8.0.tgz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/tree-1.8.0.tgz --no-check-certificate
+fi
+if [ -f tree-1.8.0.tgz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

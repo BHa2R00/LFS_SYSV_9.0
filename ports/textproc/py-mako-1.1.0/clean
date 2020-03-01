@@ -1,0 +1,4 @@
+rm -rf Mako-1.1.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

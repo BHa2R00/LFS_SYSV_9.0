@@ -1,0 +1,4 @@
+rm -rf unbound-1.9.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

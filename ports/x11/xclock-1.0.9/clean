@@ -1,0 +1,4 @@
+rm -rf xclock-1.0.9
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

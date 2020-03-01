@@ -1,0 +1,12 @@
+if [ ! -f libjpeg-turbo-2.0.2.tar.gz ];then
+wget -c https://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.2.tar.gz --no-check-certificate
+fi
+if [ -f libjpeg-turbo-2.0.2.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

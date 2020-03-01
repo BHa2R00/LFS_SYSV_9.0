@@ -1,0 +1,10 @@
+for f in $(grep -v '^#' ./font-7.md5 | awk '{print $2}')
+do
+	if [ ! -f $f ];then
+		wget -c --no-check-certificate https://www.x.org/pub/individual/font/$f
+		#md5sum -c ../font-7.md5 $f
+	fi
+done
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

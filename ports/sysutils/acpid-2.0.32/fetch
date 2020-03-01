@@ -1,0 +1,12 @@
+if [ ! -f acpid-2.0.32.tar.xz ];then
+wget -c https://downloads.sourceforge.net/acpid2/acpid-2.0.32.tar.xz --no-check-certificate
+fi
+if [ -f acpid-2.0.32.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{gmplayer,mplayer,mencoder}
+rm -rfv $PORTS_DEST/share/{doc/mplayer-1.4,mplayer}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

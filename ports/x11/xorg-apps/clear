@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/bin/{iceauth,luit,mkfontdir,mkfontscale,sessreg,setxkbmap,smproxy,x11perf,x11perfcomp,xauth,xbacklight,xcmsdb,xcursorgen,xdpr,xdpyinfo,xdriinfo,xev,xgamma,xhost,xinput,xkbbell,xkbcomp,xkbevd,xkbvleds,xkbwatch,xkill,xlsatoms,xlsclients,xmessage,xmodmap,xpr,xprop,xrandr,xrdb,xrefresh,xset,xsetroot,xvinfo,xwd,xwininfo,xwud}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

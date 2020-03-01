@@ -1,0 +1,18 @@
+if [ -f vlc-3.0.8.tar.xz ];then
+tar xf vlc-3.0.8.tar.xz
+cd vlc-3.0.8
+sed -i '/vlc_demux.h/a #define LUA_COMPAT_APIINTCASTS' modules/lua/vlc.h
+sed -i '/LIBSSH2_VERSION_NUM/s/10801/10900/' modules/access/sftp.c
+BUILDCC=gcc ./configure --prefix=$PORTS_DEST  \
+                        --disable-opencv \
+                        --disable-vpx
+make $PORTS_JOBS
+make docdir=$PORTS_DEST/share/doc/vlc-3.0.8 install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

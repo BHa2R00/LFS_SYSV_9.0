@@ -1,0 +1,19 @@
+if [ -f libdrm-2.4.99.tar.bz2 ];then
+tar xf libdrm-2.4.99.tar.bz2
+cd libdrm-2.4.99
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+mkdir build
+cd    build
+meson --prefix=$XORG_PREFIX -Dudev=true ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

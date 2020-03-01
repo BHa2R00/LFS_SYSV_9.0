@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{certtool,danetool,gnutls-cli,gnutls-cli-debug,gnutls-serv,ocsptool,p11tool,psktool,srptool}
+rm -rfv $PORTS_DEST/lib/{libgnutls*,guile/2.2/guile-gnutls-v-2.so}
+rm -rfv $PORTS_DEST/share/guile/site/2.2
+rm -rfv $PORTS_DEST/include/gnutls
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

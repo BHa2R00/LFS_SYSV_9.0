@@ -1,0 +1,8 @@
+rm -rfv $PORTS_DEST/bin/{busctl,elogind-inhibit,loginctl}
+rm -rfv $PORTS_DEST/lib/libelogind.so
+rm -rfv /etc/elogind
+rm -rfv $PORTS_DEST/include/elogind
+rm -rfv $PORTS_DEST/share/doc/elogind-241.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

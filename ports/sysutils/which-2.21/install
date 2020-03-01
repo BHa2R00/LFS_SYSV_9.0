@@ -1,0 +1,14 @@
+if [ -f which-2.21.tar.gz ];then
+tar xf which-2.21.tar.gz
+cd which-2.21
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

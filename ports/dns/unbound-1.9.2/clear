@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/unbound*
+rm -rfv $PORTS_DEST/lib/libunbound.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

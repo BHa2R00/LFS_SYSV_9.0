@@ -1,0 +1,4 @@
+rm -rf util-macros-1.19.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

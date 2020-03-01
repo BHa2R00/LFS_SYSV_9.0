@@ -1,0 +1,16 @@
+if [ ! -f libmad-0.15.1b.tar.gz ];then
+wget -c https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz --no-check-certificate
+#wget -c ftp://ftp.mars.org/pub/mpeg/libmad-0.15.1b.tar.gz --no-check-certificate
+fi
+if [ ! -f libmad-0.15.1b-fixes-1.patch ];then
+wget -c http://www.linuxfromscratch.org/patches/blfs/9.0/libmad-0.15.1b-fixes-1.patch --no-check-certificate
+fi
+if [ -f libmad-0.15.1b.tar.gz ]&&[ -f libmad-0.15.1b-fixes-1.patch ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

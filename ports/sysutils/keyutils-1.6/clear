@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{keyctl,key.dns_resolver,request-key}
+rm -rfv $PORTS_DEST/lib/libkeyutils.so
+rm -rfv $PORTS_DEST/share/keyutils
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

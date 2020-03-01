@@ -1,0 +1,4 @@
+rm -rf x264-snapshot-20190815-2245-stable
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

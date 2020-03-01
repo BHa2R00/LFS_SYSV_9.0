@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/libxcb*.so
+rm -rfv $PORTS_DEST/include/xcb
+rm -rfv $PORTS_DEST/share/doc/libxcb-1.13.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/lib/{python3.7/site-packages/markupsafe,python3.7/site-packages/MarkupSafe-1.1.1-py3.7.egg-info}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

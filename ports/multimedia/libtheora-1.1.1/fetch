@@ -1,0 +1,12 @@
+if [ ! -f libtheora-1.1.1.tar.xz ];then
+wget -c https://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.xz --no-check-certificate
+fi
+if [ -f libtheora-1.1.1.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

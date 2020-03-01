@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/libatspi.so
+rm -rfv $PORTS_DEST/include/at-spi-2.0
+rm -rfv $PORTS_DEST/share/{defaults/at-spi2,gtk-doc/html/libatspi}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

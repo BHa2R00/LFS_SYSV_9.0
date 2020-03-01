@@ -1,0 +1,4 @@
+rm -rf gdk-pixbuf-2.38.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

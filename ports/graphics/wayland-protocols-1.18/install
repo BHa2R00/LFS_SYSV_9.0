@@ -1,0 +1,14 @@
+if [ -f wayland-protocols-1.18.tar.xz ];then
+tar xf wayland-protocols-1.18.tar.xz
+cd wayland-protocols-1.18
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

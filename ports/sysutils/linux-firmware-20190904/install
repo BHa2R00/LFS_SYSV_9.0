@@ -1,0 +1,11 @@
+if [ -f linux-firmware-20190904.tar.gz ];then
+tar xf linux-firmware-20190904.tar.gz
+cp -rfv linux-firmware-6ddb9d9704e2171d91439c9c42c5965bf3863de8/* /lib/firmware/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

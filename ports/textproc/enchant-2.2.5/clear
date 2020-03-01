@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{enchant,enchant-lsmod-2}
+rm -rfv $PORTS_DEST/lib/{libenchant.so,enchant-2}
+rm -rfv $PORTS_DEST/include/enchant-2
+rm -rfv $PORTS_DEST/share/enchant-2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/share/wayland-protocols
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

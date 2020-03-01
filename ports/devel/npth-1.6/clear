@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/npth-config
+rm -rfv $PORTS_DEST/lib/libnpth.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

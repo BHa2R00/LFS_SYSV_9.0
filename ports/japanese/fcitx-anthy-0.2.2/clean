@@ -1,0 +1,4 @@
+rm -rf fcitx-anthy-0.2.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

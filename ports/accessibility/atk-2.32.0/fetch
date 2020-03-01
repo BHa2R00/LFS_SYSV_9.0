@@ -1,0 +1,13 @@
+if [ ! -f atk-2.32.0.tar.xz ];then
+wget -c http://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz --no-check-certificate
+#wget -c ftp://ftp.gnome.org/pub/gnome/sources/atk/2.32/atk-2.32.0.tar.xz --no-check-certificate
+fi
+if [ -f atk-2.32.0.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

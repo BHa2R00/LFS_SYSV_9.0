@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{addgnupghome,applygnupgdefaults,dirmngr,dirmngr-client,g13,gpg-agent,gpg-connect-agent,gpg,gpgconf,gpgparsemail,gpgscm,gpgsm,gpgtar,gpgv,gpg-wks-server,gpg-zip,kbxutil,symcryptrun,watchgnupg}
+rm -rfv $PORTS_DEST/share/{doc/gnupg-2.2.17,gnupg}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

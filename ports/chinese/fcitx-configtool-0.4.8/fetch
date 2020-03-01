@@ -1,0 +1,12 @@
+if [ ! -f fcitx-configtool-0.4.8.tar.xz ];then
+wget -c http://download.fcitx-im.org/fcitx-configtool/fcitx-configtool-0.4.8.tar.xz --no-check-certificate
+fi
+if [ -f fcitx-configtool-0.4.8.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,4 @@
+rm -rf xf86-input-evdev-2.10.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

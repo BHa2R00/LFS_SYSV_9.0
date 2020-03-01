@@ -1,0 +1,42 @@
+#if [ -f fcitx-4.2.8.5_dict.tar.xz ]&&[ -f custom-translation-install-dir.patch ]&&[ -f opencc-1.0.patch ];then
+if [ -f fcitx-4.2.8.5_dict.tar.xz ];then
+tar xf fcitx-4.2.8.5_dict.tar.xz
+cd fcitx-4.2.8.5
+#patch -p1 -i ../custom-translation-install-dir.patch
+#patch -p1 -i ../opencc-1.0.patch
+mkdir fcitx-build &&
+cd fcitx-build
+cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=$PORTS_DEST \
+    -DSYSCONFDIR=/etc \
+    -DFORCE_PRESAGE=ON \
+    -DFORCE_ENCHANT=ON \
+    -DENABLE_TEST=OFF \
+    -DENABLE_GTK2_IM_MODULE=ON \
+    -DENABLE_QT=OFF \
+    -DENABLE_QT_GUI=OFF \
+    -DENABLE_QT_IM_MODULE=OFF
+make $PORTS_JOBS
+make install
+gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor &&
+update-desktop-database -q &&
+update-mime-database /usr/share/mime &> /dev/null &&
+cd ../src/frontend/gtk2 &&
+make install &&
+gtk-query-immodules-2.0 --update-cache &&
+cd ../../../ &&
+#cd src/frontend/qt &&
+#make install &&
+#cd ../../../ &&
+cd tools/gui &&
+make install &&
+cd ../../ &&
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

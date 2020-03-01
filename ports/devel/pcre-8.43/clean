@@ -1,0 +1,4 @@
+rm -rf pcre-8.43
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

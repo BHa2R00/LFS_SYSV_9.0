@@ -1,0 +1,4 @@
+rm -rf {rpcbind-1.2.5,blfs-bootscripts-20190609}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

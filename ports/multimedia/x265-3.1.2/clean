@@ -1,0 +1,4 @@
+rm -rf x265_3.1.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

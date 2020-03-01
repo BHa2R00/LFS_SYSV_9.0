@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/libtheora*.so
+rm -rfv $PORTS_DEST/include/theora
+rm -rfv $PORTS_DEST/share/doc/libtheora-1.1.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

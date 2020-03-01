@@ -1,0 +1,12 @@
+if [ -f Mako-1.1.0.tar.gz ];then
+tar xf Mako-1.1.0.tar.gz
+cd Mako-1.1.0
+python3 setup.py install --optimize=1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,17 @@
+if [ -f links-2.19.tar.bz2 ];then
+tar xf links-2.19.tar.bz2
+cd links-2.19
+./configure --prefix=$PORTS_DEST --mandir=$PORTS_DEST/share/man
+make $PORTS_JOBS
+make install
+install -v -d -m755 $PORTS_DEST/share/doc/links-2.19 &&
+install -v -m644 doc/links_cal/* KEYS BRAILLE_HOWTO \
+    $PORTS_DEST/share/doc/links-2.19
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

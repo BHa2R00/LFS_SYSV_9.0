@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/libassuan-config
+rm -rfv $PORTS_DEST/lib/libassuan.so
+rm -rfv $PORTS_DEST/share/doc/libassuan-2.5.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

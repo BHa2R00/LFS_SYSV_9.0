@@ -1,0 +1,14 @@
+if [ -f blfs-bootscripts-20190609.tar.xz ];then
+tar xf blfs-bootscripts-20190609.tar.xz
+cd blfs-bootscripts-20190609
+make install-service-dhclient
+make install-dhcpd
+make install-service-dhcpcd
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

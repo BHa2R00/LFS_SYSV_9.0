@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/{libxkbcommon.so,libxkbcommon-x11.so}
+rm -rfv $PORTS_DEST/include/xkbcommon
+rm -rfv $PORTS_DEST/share/doc/libxkbcommon-0.8.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

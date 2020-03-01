@@ -1,0 +1,4 @@
+rm -rf libxkbcommon-0.8.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

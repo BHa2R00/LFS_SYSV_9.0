@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/share/pkgconfig
+rm -rfv $PORTS_DEST/share/util-macros
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

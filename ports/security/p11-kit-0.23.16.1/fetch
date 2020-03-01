@@ -1,0 +1,12 @@
+if [ ! -f p11-kit-0.23.16.1.tar.gz ];then
+wget -c https://github.com/p11-glue/p11-kit/releases/download/0.23.16.1/p11-kit-0.23.16.1.tar.gz --no-check-certificate
+fi
+if [ -f p11-kit-0.23.16.1.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

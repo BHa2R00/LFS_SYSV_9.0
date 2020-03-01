@@ -1,0 +1,4 @@
+rm -rf xf86-input-mouse-1.9.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

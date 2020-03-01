@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/lib/xorg/modules/input/mouse_drv.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,17 @@
+if [ -f libvpx-1.8.1.tar.gz ];then
+tar xf libvpx-1.8.1.tar.gz
+cd libvpx-1.8.1
+sed -i 's/cp -p/cp/' build/make/Makefile
+mkdir libvpx-build            &&
+cd    libvpx-build            &&
+../configure --prefix=$PORTS_DEST --enable-shared --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

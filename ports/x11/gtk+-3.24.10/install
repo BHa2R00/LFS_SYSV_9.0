@@ -1,0 +1,22 @@
+if [ -f gtk+-3.24.10.tar.xz ];then
+tar xf gtk+-3.24.10.tar.xz
+cd gtk+-3.24.10
+cd build
+meson --prefix=$PORTS_DEST   \
+      -Dcolord=yes      \
+      -Dgtk_doc=false   \
+      -Dman=false        \
+      -Dbroadway_backend=true ..
+#../configure --prefix=$PORTS_DEST --with-x --disable-gtk-doc --enable-broadway-backend
+ninja
+ninja install
+#make $PORTS_JOBS
+#make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

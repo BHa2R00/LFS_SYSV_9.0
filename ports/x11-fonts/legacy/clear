@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/bdftopcf
+rm -rfv $PORTS_DEST/share/fonts/100dpi
+rm -rfv $PORTS_DEST/share/fonts/75dpi
+rm -rfv $PORTS_DEST/share/fonts/misc
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

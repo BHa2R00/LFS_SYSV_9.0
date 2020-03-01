@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{asn1Coding,asn1Decoding,asn1Parser}
+rm -rfv $PORTS_DEST/lib/libtasn1.so
+rm -rfv $PORTS_DEST/share/gtk-doc/html/libtasn1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

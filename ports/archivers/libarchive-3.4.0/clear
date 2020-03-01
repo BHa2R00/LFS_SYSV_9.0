@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/
+rm -rfv $PORTS_DEST/lib/
+rm -rfv $PORTS_DEST/share/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

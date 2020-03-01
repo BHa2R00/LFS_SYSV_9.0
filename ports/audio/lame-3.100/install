@@ -1,0 +1,14 @@
+if [ -f lame-3.100.tar.gz ];then
+tar xf lame-3.100.tar.gz
+cd lame-3.100
+./configure --prefix=$PORTS_DEST --enable-mp3rtp --disable-static
+make $PORTS_JOBS
+make pkghtmldir=$PORTS_DEST/share/doc/lame-3.100 install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

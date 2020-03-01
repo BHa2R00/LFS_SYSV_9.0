@@ -1,0 +1,4 @@
+rm -rf libpng-1.6.37
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

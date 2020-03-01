@@ -1,0 +1,24 @@
+if [ -f pcre-8.43.tar.bz2 ];then
+tar xf pcre-8.43.tar.bz2
+cd pcre-8.43
+./configure --prefix=$PORTS_DEST              \
+            --docdir=/usr/share/doc/pcre-8.43 \
+            --enable-unicode-properties       \
+            --enable-pcre16                   \
+            --enable-pcre32                   \
+            --enable-pcregrep-libz            \
+            --enable-pcregrep-libbz2          \
+            --enable-pcretest-libreadline     \
+            --disable-static
+make $PORTS_JOBS
+make install
+mv -v /usr/lib/libpcre.so.* /lib &&
+ln -sfv ../../lib/$(readlink /usr/lib/libpcre.so) /usr/lib/libpcre.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,12 @@
+if [ ! -f shared-mime-info-1.12.tar.xz ];then
+wget -c https://gitlab.freedesktop.org/xdg/shared-mime-info/uploads/80c7f1afbcad2769f38aeb9ba6317a51/shared-mime-info-1.12.tar.xz --no-check-certificate
+fi
+if [ -f shared-mime-info-1.12.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

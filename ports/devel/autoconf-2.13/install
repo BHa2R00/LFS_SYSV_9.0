@@ -1,0 +1,16 @@
+if [ -f autoconf-2.13.tar.gz ];then
+tar xf autoconf-2.13.tar.gz
+cd autoconf-2.13
+./configure --prefix=$PORTS_DEST --program-suffix=2.13
+make $PORTS_JOBS
+make install
+install -v -m644 autoconf213.info $PORTS_DEST/share/info &&
+install-info --info-dir=$PORTS_DEST/share/info autoconf213.info
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

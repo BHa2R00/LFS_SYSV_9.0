@@ -1,0 +1,14 @@
+if [ -f anthy-9100h.tar.gz ];then
+tar xf anthy-9100h.tar.gz
+cd anthy-9100h
+./configure --prefix=$PORTS_DEST --enable-shared --enable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

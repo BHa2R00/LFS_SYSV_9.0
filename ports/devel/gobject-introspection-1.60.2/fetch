@@ -1,0 +1,14 @@
+if [ ! -f gobject-introspection-1.60.2.tar.xz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/gobject-introspection-1.60.2.tar.xz
+#wget -c http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.60/gobject-introspection-1.60.2.tar.xz --no-check-certificate
+#wget -c ftp://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.60/gobject-introspection-1.60.2.tar.xz --no-check-certificate
+fi
+if [ -f gobject-introspection-1.60.2.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

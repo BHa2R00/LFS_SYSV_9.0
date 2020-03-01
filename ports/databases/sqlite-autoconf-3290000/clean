@@ -1,0 +1,4 @@
+rm -rf sqlite-autoconf-3290000
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

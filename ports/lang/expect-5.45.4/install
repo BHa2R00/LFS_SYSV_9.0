@@ -1,0 +1,19 @@
+if [ -f expect5.45.4.tar.gz ];then
+tar xf expect5.45.4.tar.gz
+cd expect5.45.4
+./configure --prefix=$PORTS_DEST    \
+            --with-tcl=$PORTS_DEST/lib     \
+            --enable-shared         \
+            --mandir=$PORTS_DEST/share/man \
+            --with-tclinclude=$PORTS_DEST/include
+make $PORTS_JOBS
+make install
+ln -svf expect5.45.4/libexpect5.45.4.so $PORTS_DEST/lib
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

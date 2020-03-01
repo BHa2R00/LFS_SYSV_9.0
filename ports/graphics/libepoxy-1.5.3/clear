@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libepoxy.so
+rm -rfv $PORTS_DEST/include/epoxy
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

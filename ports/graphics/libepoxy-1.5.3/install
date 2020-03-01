@@ -1,0 +1,16 @@
+if [ -f libepoxy-1.5.3.tar.xz ];then
+tar xf libepoxy-1.5.3.tar.xz
+cd libepoxy-1.5.3
+mkdir build &&
+cd build &&
+meson --prefix=$PORTS_DEST ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

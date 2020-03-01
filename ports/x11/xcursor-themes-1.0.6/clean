@@ -1,0 +1,4 @@
+rm -rf xcursor-themes-1.0.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

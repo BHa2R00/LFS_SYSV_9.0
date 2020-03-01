@@ -1,0 +1,31 @@
+if [ -f mesa-19.1.4.tar.xz ];then
+tar xf mesa-19.1.4.tar.xz
+cd mesa-19.1.4
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+export GALLIUM_DRV="i915"
+export DRI_DRIVERS="i965"
+mkdir build &&
+cd    build &&
+meson --prefix=$XORG_PREFIX          \
+      -Dplatforms=x11		     \
+      -Dbuildtype=release            \
+      -Ddri-drivers=$DRI_DRIVERS     \
+      -Dgallium-drivers=$GALLIUM_DRV \
+      -Dgallium-nine=false           \
+      -Dglx=dri                      \
+      -Dosmesa=none               \
+      -Dvalgrind=false               \
+      ..                             &&
+unset GALLIUM_DRV DRI_DRIVERS
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

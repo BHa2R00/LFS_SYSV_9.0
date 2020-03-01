@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/local/bin/{dmenu,dmenu_path,dmenu_run}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

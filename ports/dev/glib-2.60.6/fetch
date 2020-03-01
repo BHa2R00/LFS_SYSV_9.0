@@ -1,0 +1,16 @@
+if [ ! -f glib-2.60.6.tar.xz ];then
+wget -c http://ftp.gnome.org/pub/gnome/sources/glib/2.60/glib-2.60.6.tar.xz --no-check-certificate
+#wget -c ftp://ftp.gnome.org/pub/gnome/sources/glib/2.60/glib-2.60.6.tar.xz --no-check-certificate
+fi
+if [ ! -f glib-2.60.6-skip_warnings-1.patch ];then
+wget -c http://www.linuxfromscratch.org/patches/blfs/9.0/glib-2.60.6-skip_warnings-1.patch --no-check-certificate
+fi
+if [ -f glib-2.60.6.tar.xz ]&&[ -f glib-2.60.6-skip_warnings-1.patch ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,4 @@
+rm -rf glib-2.60.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,11 @@
+rm -rfv $PORTS_DEST/bin/{dbus-cleanup-sockets,dbus-daemon,dbus-launch,dbus-monitor,dbus-run-session,dbus-send,dbus-test-tool,dbus-update-activation-environment,dbus-uuidgen}
+rm -rfv $PORTS_DEST/lib/libdbus-1.so
+rm -rfv /etc/dbus-1
+rm -rfv $PORTS_DEST/{include,lib}/dbus-1.0
+rm -rfv $PORTS_DEST/share/dbus-1
+rm -rfv $PORTS_DEST/share/xml/dbus-1
+rm -rfv $PORTS_DEST/share/doc/dbus-1.12.16
+rm -rfv /var/{lib,run}/dbus
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

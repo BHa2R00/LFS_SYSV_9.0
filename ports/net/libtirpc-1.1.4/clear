@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libtirpc.so*
+rm -rfv $PORTS_DEST/include/tirpc
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{broadwayd,gtk3-demo,gtk3-demo-application,gtk3-icon-browser,gtk3-widget-factory,gtk-builder-tool,gtk-encode-symbolic-svg,gtk-launch,gtk-query-immodules-3.0,gtk-query-settings,gtk-update-icon-cache}
+rm -rfv $PORTS_DEST/lib/{libgailutil-3.so,libgdk-3.so,libgtk-3.so}
+rm -rfv $PORTS_DEST/include/{gail,gtk}-3.0
+rm -rfv $PORTS_DEST/share/{gtk-3.0,gtk-doc/html/{gail-libgail-util,gdk,gtk}3,themes/{Default,Emacs}/gtk-3.0}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

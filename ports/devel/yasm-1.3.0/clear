@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/yasm
+rm -rfv $PORTS_DEST/lib/libyasm.a
+rm -rfv $PORTS_DEST/include/libyasm
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

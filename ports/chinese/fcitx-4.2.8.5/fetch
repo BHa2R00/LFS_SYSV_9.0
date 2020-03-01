@@ -1,0 +1,19 @@
+if [ ! -f fcitx-4.2.8.5_dict.tar.xz ];then
+wget -c http://download.fcitx-im.org/fcitx/fcitx-4.2.8.5_dict.tar.xz --no-check-certificate
+fi
+#if [ ! -f custom-translation-install-dir.patch ];then
+#wget -c https://projects.archlinux.org/svntogit/community.git/plain/trunk/custom-translation-install-dir.patch?h=packages/fcitx --no-check-certificate
+#fi
+#if [ ! -f opencc-1.0.patch ];then
+#wget -c https://projects.archlinux.org/svntogit/community.git/plain/trunk/opencc-1.0.patch?h=packages/fcitx --no-check-certificate
+#fi
+#if [ -f fcitx-4.2.8.5_dict.tar.xz ]&&[ -f custom-translation-install-dir.patch ]&&[ -f opencc-1.0.patch ];then
+if [ -f fcitx-4.2.8.5_dict.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

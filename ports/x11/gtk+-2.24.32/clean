@@ -1,0 +1,4 @@
+rm -rf gtk+-2.24.32
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,14 @@
+if [ -f dbus-glib-0.110.tar.gz ];then
+tar xf dbus-glib-0.110.tar.gz
+cd dbus-glib-0.110
+./configure --prefix=$PORTS_DEST --sysconfdir=/etc --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

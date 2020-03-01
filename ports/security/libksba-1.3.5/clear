@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/ksba-config
+rm -rfv $PORTS_DEST/lib/libksba.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

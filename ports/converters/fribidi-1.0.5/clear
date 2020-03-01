@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/fribidi
+rm -rfv $PORTS_DEST/lib/libfribidi.so
+rm -rfv $PORTS_DEST/include/fribidi
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

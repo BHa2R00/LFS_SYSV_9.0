@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/libunistring.so
+rm -rfv $PORTS_DEST/include/unistring
+rm -rfv $PORTS_DEST/share/doc/libunistring-0.9.10
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

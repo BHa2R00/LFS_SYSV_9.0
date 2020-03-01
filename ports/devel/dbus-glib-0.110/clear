@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/dbus-binding-tool
+rm -rfv $PORTS_DEST/lib/libdbus-glib-1.so
+rm -rfv $PORTS_DEST/share/{gtk-doc/html/dbus-glib,doc/dbus-glib-0.110}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

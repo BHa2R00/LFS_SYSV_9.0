@@ -1,0 +1,14 @@
+if [ -f libogg-1.3.3.tar.xz ];then
+tar xf libogg-1.3.3.tar.xz
+cd libogg-1.3.3
+./configure --prefix=$PORTS_DEST --disable-static --docdir=$PORTS_DEST/share/doc/libogg-1.3.3
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

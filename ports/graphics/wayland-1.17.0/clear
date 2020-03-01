@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/wayland-scanner
+rm -rfv $PORTS_DEST/lib/{libwayland-client.so,libwayland-cursor.so,libwayland-server.so}
+rm -rfv $PORTS_DEST/share/wayland
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

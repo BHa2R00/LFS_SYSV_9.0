@@ -1,0 +1,4 @@
+rm -rf intel-vaapi-driver-2.3.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

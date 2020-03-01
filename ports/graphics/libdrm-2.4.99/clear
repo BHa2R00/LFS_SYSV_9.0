@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/{libdrm*.so,libkms.so}
+rm -rfv $PORTS_DEST/include/{libdrm,libkms,libdrm}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

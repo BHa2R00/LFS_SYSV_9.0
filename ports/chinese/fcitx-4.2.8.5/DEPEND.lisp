@@ -1,0 +1,15 @@
+(
+ "devel/llvm-8.0.1/"
+ "devel/cmake-3.15.2/"
+ "x11/xorg-libraries/"
+ "x11/gtk+-2.24.32/"
+ "devel/dbus-1.12.16/"
+ "devel/dbus-glib-0.110/"
+ "devel/icu4c-64_2/"
+ "x11-toolkits/pango-1.42.4/"
+ "graphics/cairo-1.16.0/"
+ "textproc/enchant-2.2.5/"
+ "devel/gobject-introspection-1.60.2/"
+ "dev/libxml2-2.9.9/"
+ "misc/iso-codes-4.3/"
+ )

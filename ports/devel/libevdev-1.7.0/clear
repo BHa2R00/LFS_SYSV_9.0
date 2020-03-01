@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{libevdev-tweak-device,mouse-dpi-tool,touchpad-edge-detector}
+rm -rfv $PORTS_DEST/lib/libevdev.so
+rm -rfv $PORTS_DEST/include/libevdev-1.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

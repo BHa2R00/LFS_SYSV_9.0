@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{lspci,setpci,update-pciids}
+rm -rfv $PORTS_DEST/lib/libpci.so
+rm -rfv $PORTS_DEST/include/pci
+rm -rfv $PORTS_DEST/share/hwdata
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

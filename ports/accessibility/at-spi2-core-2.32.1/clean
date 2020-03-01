@@ -1,0 +1,4 @@
+rm -rf at-spi2-core-2.32.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

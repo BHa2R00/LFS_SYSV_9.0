@@ -1,0 +1,4 @@
+rm -rf libevent-2.1.11-stable
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

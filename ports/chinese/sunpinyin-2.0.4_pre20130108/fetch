@@ -1,0 +1,12 @@
+if [ ! -f sunpinyin-2.0.4_pre20130108.tar.xz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/sunpinyin-2.0.4_pre20130108.tar.xz --no-check-certificate
+fi
+if [ -f sunpinyin-2.0.4_pre20130108.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,14 @@
+if [ -f MarkupSafe-1.1.1.tar.gz ];then
+tar xf MarkupSafe-1.1.1.tar.gz
+cd MarkupSafe-1.1.1
+python3 setup.py build
+python3 setup.py install --optimize=1
+#ln -vs $PORT_DEST/lib/python3.7/site-packages/MarkupSafe-1.1.1-py3.7-linux-x86_64.egg/markupsafe /lib/python3.7/site-packages/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{curl,curl-config}
+rm -rfv $PORTS_DEST/lib/libcurl.so
+rm -rfv $PORTS_DEST/include/curl
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

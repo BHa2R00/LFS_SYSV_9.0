@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libuv.so
+rm -rfv $PORTS_DEST/include/uv
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

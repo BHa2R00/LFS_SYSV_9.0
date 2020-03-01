@@ -1,0 +1,4 @@
+rm -rf shared-mime-info-1.12
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf tigervnc-1.9.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

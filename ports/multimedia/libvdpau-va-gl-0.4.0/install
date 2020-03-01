@@ -1,0 +1,19 @@
+if [ -f libvdpau-va-gl-0.4.0.tar.gz ];then
+tar xf libvdpau-va-gl-0.4.0.tar.gz
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+cd libvdpau-va-gl-0.4.0
+mkdir build &&
+cd    build &&
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$XORG_PREFIX ..
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

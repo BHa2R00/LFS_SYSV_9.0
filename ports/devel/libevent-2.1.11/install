@@ -1,0 +1,16 @@
+if [ -f libevent-2.1.11-stable.tar.gz ];then
+tar xf libevent-2.1.11-stable.tar.gz
+cd libevent-2.1.11-stable
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+install -v -m755 -d $PORTS_DEST/share/doc/libevent-2.1.11/api
+#cp      -v -R       doxygen/html/*  $PORTS_DEST/share/doc/libevent-2.1.11/api
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

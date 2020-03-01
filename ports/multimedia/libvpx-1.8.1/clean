@@ -1,0 +1,4 @@
+rm -rf libvpx-1.8.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

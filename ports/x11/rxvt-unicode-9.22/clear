@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{urxvt,urxvtd,urxvtc}
+rm -rfv $PORTS_DEST/lib/urxvt
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

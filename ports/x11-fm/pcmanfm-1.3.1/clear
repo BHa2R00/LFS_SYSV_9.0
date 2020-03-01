@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/pcmanfm
+rm -rfv $PORTS_DEST/lib/pcmanfm
+rm -rfv $PORTS_DEST/share/pcmanfm
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

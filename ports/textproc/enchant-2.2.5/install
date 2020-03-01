@@ -1,0 +1,19 @@
+if [ -f enchant-2.2.5.tar.gz ];then
+tar xf enchant-2.2.5.tar.gz
+cd enchant-2.2.5
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+rm -rf $PORTS_DEST/include/enchant                    &&
+ln -sfv enchant-2       $PORTS_DEST/include/enchant   &&
+ln -sfv enchant-2       $PORTS_DEST/bin/enchant       &&
+ln -sfv libenchant-2.so $PORTS_DEST/lib/libenchant.so &&
+ln -sfv enchant-2.pc    $PORTS_DEST/lib/pkgconfig/enchant.pc
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

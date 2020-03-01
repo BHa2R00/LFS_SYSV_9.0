@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{vpxdec,vpxenc}
+rm -rfv $PORTS_DEST/lib/libvpx.so
+rm -rfv $PORTS_DEST/include/vpx
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

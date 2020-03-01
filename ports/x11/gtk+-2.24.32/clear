@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{gtk-builder-convert,gtk-demo,gtk-query-immodules-2.0,gtk-update-icon-cache}
+rm -rfv $PORTS_DEST/lib/{libgailutil.so,libgdk-x11-2.0.so,libgtk-x11-2.0.so,gtk-2.0}
+rm -rfv $PORTS_DEST/include/{gail-1.0,gtk-2.0,gtk-unix-print-2.0}
+rm -rfv $PORTS_DEST/share/{doc/gtk+-2.24.32,gtk-2.0,gtk-doc/html/{gail-libgail-util,gdk2,gtk2},themes/{Default,Emacs,Raleigh}}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

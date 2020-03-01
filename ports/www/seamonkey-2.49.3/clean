@@ -1,0 +1,4 @@
+rm -rf seamonkey-2.49.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

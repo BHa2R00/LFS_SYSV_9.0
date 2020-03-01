@@ -1,0 +1,22 @@
+if [ -f gstreamer-1.16.0.tar.xz ]&&[ -f gstreamer-1.16.0-buffer_size_reset_fix-1.patch ];then
+tar xf gstreamer-1.16.0.tar.xz
+cd gstreamer-1.16.0
+patch -Np1 -i ../gstreamer-1.16.0-buffer_size_reset_fix-1.patch
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST \
+       -Dbuildtype=release \
+       -Dgst_debug=false   \
+       -Dgtk_doc=disabled  \
+       -Dpackage-origin=http://www.linuxfromscratch.org/blfs/view/svn/ \
+       -Dpackage-name="GStreamer 1.16.0 BLFS" ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

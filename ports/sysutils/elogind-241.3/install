@@ -1,0 +1,26 @@
+if [ -f elogind-241.3.tar.gz ]&&[ -f blfs-bootscripts-20190609.tar.xz ];then
+tar xf elogind-241.3.tar.gz
+tar xf blfs-bootscripts-20190609.tar.xz
+cd elogind-241.3
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST                        \
+      --sysconfdir=/etc                    \
+      --localstatedir=/var                 \
+      -Dcgroup-controller=elogind          \
+      -Ddbuspolicydir=/etc/dbus-1/system.d \
+      ..  &&
+ninja
+ninja install                                         &&
+ln -sfv  libelogind.pc $PORTS_DEST/lib/pkgconfig/libsystemd.pc &&
+ln -sfvn elogind $PORTS_DEST/include/systemd
+cd ../blfs-bootscripts-20190609
+make install-elogind
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

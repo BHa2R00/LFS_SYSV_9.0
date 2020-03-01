@@ -1,0 +1,4 @@
+rm -rf tree-1.8.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

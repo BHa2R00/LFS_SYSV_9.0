@@ -1,0 +1,15 @@
+if [ -f libvorbis-1.3.6.tar.xz ];then
+tar xf libvorbis-1.3.6.tar.xz
+cd libvorbis-1.3.6
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+install -v -m644 doc/Vorbis* $PORTS_DEST/share/doc/libvorbis-1.3.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

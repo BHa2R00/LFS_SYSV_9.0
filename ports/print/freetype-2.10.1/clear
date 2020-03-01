@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/freetype-config
+rm -rfv $PORTS_DEST/lib/libfreetype.so
+rm -rfv $PORTS_DEST/include/freetype2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

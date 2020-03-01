@@ -1,0 +1,4 @@
+rm -rf libmad-0.15.1b
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

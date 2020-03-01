@@ -1,0 +1,17 @@
+if [ -f MPlayer-1.4.tar.xz ];then
+tar xf MPlayer-1.4.tar.xz
+cd MPlayer-1.4
+./configure	--prefix=$PORTS_DEST \
+		--confdir=/etc/mplayer \
+		--enable-dynamic-plugins \
+		--enable-v4l2
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,14 @@
+if [ -f scrot_0.8.orig.tar.gz ];then
+tar xf scrot_0.8.orig.tar.gz
+cd scrot-0.8
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

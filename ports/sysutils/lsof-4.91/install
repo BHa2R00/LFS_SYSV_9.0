@@ -1,0 +1,17 @@
+if [ -f lsof_4.91.tar.gz ];then
+tar xf lsof_4.91.tar.gz
+cd lsof_4.91
+tar -xf lsof_4.91_src.tar  &&
+cd lsof_4.91_src
+./Configure -n linux
+make CFGL="-L./lib -ltirpc"
+install -v -m0755 -o root -g root lsof $PORTS_DEST/bin &&
+install -v lsof.8 $PORTS_DEST/share/man/man8
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

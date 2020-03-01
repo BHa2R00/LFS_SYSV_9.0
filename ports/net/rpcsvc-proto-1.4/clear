@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/rpcgen
+rm -rfv $PORTS_DEST/include/rpcsvc
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

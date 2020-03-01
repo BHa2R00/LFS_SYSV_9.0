@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libva*
+rm -rfv $PORTS_DEST/include/va
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

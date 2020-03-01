@@ -1,0 +1,20 @@
+if [ -f wpa_supplicant-2.9.tar.gz ]&&[ -f blfs-bootscripts-20190609.tar.xz ];then
+tar xf wpa_supplicant-2.9.tar.gz
+tar xvf blfs-bootscripts-20190609.tar.xz
+cd wpa_supplicant-2.9
+cp -v ../.config wpa_supplicant/
+cd wpa_supplicant/
+make BINDIR=/sbin LIBDIR=/lib $PORTS_JOBS
+install -v -m755 wpa_{cli,passphrase,supplicant} /sbin/ &&
+install -v -m644 doc/docbook/wpa_supplicant.conf.5 $PORTS_DEST/share/man/man5/ &&
+install -v -m644 doc/docbook/wpa_{cli,passphrase,supplicant}.8 $PORTS_DEST/share/man/man8/
+cd ../../blfs-bootscripts-20190609
+make install-service-wpa
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

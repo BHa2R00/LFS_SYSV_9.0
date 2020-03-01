@@ -1,0 +1,13 @@
+if [ ! -f which-2.21.tar.gz ];then
+wget -c https://ftp.gnu.org/gnu/which/which-2.21.tar.gz --no-check-certificate
+# wget -c ftp://ftp.gnu.org/gnu/which/which-2.21.tar.gz --no-check-certificate
+fi
+if [ -f which-2.21.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

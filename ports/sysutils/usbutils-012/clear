@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/bin/{lsusb,lsusb.py,usb-devices,usbhid-dump}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

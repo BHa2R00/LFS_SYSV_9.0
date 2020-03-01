@@ -1,0 +1,4 @@
+rm -rf libdatrie-0.2.12
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

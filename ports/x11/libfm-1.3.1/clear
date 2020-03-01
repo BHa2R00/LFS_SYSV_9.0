@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{libfm-pref-apps,lxshortcut}
+rm -rfv $PORTS_DEST/lib/{libfm.so,libfm-extra.so,libfm-gtk.so,libfm}
+rm -rfv $PORTS_DEST/share/{gtk-doc/html/libfm,libfm}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

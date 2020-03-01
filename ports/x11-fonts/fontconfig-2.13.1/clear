@@ -1,0 +1,10 @@
+rm -rfv $PORTS_DEST/bin/{fc-cache,fc-cat,fc-conflist,fc-list,fc-match,fc-pattern,fc-query,fc-scan,fc-validate}
+rm -rfv $PORTS_DEST/lib/libfontconfig.so
+rm -rfv /etc/fonts
+rm -rfv $PORTS_DEST/include/fontconfig
+rm -rfv $PORTS_DEST/share/fontconfig
+rm -rfv $PORTS_DEST/share/xml/fontconfig
+rm -rfv /var/cache/fontconfig
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

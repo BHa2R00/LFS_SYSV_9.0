@@ -1,0 +1,13 @@
+if [ -f keyutils-1.6.tar.bz2 ];then
+tar xf keyutils-1.6.tar.bz2
+cd keyutils-1.6
+make $PORTS_JOBS
+make NO_ARLIB=1 install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

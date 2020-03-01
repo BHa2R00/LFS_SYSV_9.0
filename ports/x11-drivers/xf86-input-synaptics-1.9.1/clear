@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{synclient,syndaemon}
+rm -rfv $PORTS_DEST/lib/xorg/modules/input/synaptics_drv.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

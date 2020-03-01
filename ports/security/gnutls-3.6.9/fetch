@@ -1,0 +1,13 @@
+if [ ! -f gnutls-3.6.9.tar.xz ];then
+wget -c https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.9.tar.xz --no-check-certificate
+#wget -c ftp://ftp.gnupg.org/gcrypt/gnutls/v3.6/gnutls-3.6.9.tar.xz --no-check-certificate
+fi
+if [ -f gnutls-3.6.9.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

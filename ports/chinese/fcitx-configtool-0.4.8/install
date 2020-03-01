@@ -1,0 +1,14 @@
+if [ -f fcitx-configtool-0.4.8.tar.xz ];then
+tar xf fcitx-configtool-0.4.8.tar.xz
+cd fcitx-configtool-0.4.8
+cmake -DCMAKE_INSTALL_PREFIX=$PORTS_DEST -DENABLE_GTK2=ON -DENABLE_GTK3=OFF .
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/gst-*
+rm -rfv $PORTS_DEST/lib/{libgst*.so,gstreamer-1.0}
+rm -rfv $PORTS_DEST/{include,libexec}/gstreamer-1.0
+rm -rfv $PORTS_DEST/share/gtk-doc/html/gstreamer{,-libs,-plugins}-1.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

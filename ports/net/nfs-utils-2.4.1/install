@@ -1,0 +1,29 @@
+if [ -f nfs-utils-2.4.1.tar.xz ]&&[ -f blfs-bootscripts-20190609.tar.xz ];then
+tar xf nfs-utils-2.4.1.tar.xz
+tar xf blfs-bootscripts-20190609.tar.xz
+cd nfs-utils-2.4.1
+groupadd -g 99 nogroup
+useradd -c "Unprivileged Nobody" -d /dev/null -g nogroup \
+    -s /bin/false -u 99 nobody
+./configure --prefix=$PORTS_DEST          \
+            --sysconfdir=/etc      \
+            --sbindir=/sbin        \
+            --disable-nfsv4        \
+            --disable-gss
+make $PORTS_JOBS
+make install
+mv -v /sbin/start-statd $PORTS_DEST/sbin
+chmod u+w,go+r /sbin/mount.nfs
+chown nobody.nogroup /var/lib/nfs
+touch /etc/exports
+cd ../blfs-bootscripts-20190609
+make install-nfs-server
+make install-nfs-client
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,14 @@
+if [ ! -f xf86-input-synaptics-1.9.1.tar.bz2 ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/xf86-input-synaptics-1.9.1.tar.bz2
+#wget -c https://www.x.org/pub/individual/driver/xf86-input-synaptics-1.9.1.tar.bz2 --no-check-certificate
+#wget -c ftp://ftp.x.org/pub/individual/driver/xf86-input-synaptics-1.9.1.tar.bz2 --no-check-certificate
+fi
+if [ -f xf86-input-synaptics-1.9.1.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

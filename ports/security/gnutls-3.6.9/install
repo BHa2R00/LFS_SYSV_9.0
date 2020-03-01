@@ -1,0 +1,14 @@
+if [ -f gnutls-3.6.9.tar.xz ];then
+tar xf gnutls-3.6.9.tar.xz
+cd gnutls-3.6.9
+./configure --prefix=$PORTS_DEST --docdir=$PORTS_DEST/share/doc/gnutls-3.6.9 --disable-guile --without-p11-kit
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

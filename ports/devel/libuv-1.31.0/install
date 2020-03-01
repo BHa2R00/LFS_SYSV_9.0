@@ -1,0 +1,15 @@
+if [ -f libuv-v1.31.0.tar.gz ];then
+tar xf libuv-v1.31.0.tar.gz
+cd libuv-v1.31.0
+sh autogen.sh
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

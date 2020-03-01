@@ -1,0 +1,25 @@
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+for package in $(grep -v '^#' ./legacy.dat | awk '{print $3}')
+do
+  if [ ! -f $package ];then
+  	echo 'FETCH-ERROR'
+  	echo 'FETCH-ERROR' >./R
+	exit 1
+  else
+  	echo 'NIL'
+  	echo 'NIL' >./R
+  fi
+  packagedir=${package%.tar.bz2}
+  tar -xf $package
+  pushd $packagedir
+    ./configure $XORG_CONFIG
+    make
+    make install
+  popd
+  rm -rf $packagedir
+  /sbin/ldconfig
+  echo 'NIL'
+  echo 'NIL' >./R
+done

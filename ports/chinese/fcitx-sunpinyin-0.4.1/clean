@@ -1,0 +1,4 @@
+rm -rf fcitx-sunpinyin-0.4.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

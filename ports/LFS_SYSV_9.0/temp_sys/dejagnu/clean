@@ -1,0 +1,4 @@
+rm -rf dejagnu-1.6.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

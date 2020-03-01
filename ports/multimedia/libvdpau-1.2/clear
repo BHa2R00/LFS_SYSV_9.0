@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/{libvdpau.so,vdpau}
+rm -rfv $PORTS_DEST/include/vdpau
+rm -rfv $PORTS_DEST/share/doc/libvdpau-1.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

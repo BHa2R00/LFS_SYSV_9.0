@@ -1,0 +1,14 @@
+if [ ! -f libxml2-2.9.9.tar.gz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/libxml2-2.9.9.tar.gz --no-check-certificate
+#wget -c http://xmlsoft.org/sources/libxml2-2.9.9.tar.gz --no-check-certificate
+#wget -c ftp://xmlsoft.org/libxml2/libxml2-2.9.9.tar.gz --no-check-certificate
+fi
+if [ -f libxml2-2.9.9.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

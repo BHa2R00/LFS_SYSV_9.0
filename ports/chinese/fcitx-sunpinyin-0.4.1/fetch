@@ -1,0 +1,12 @@
+if [ ! -f fcitx-sunpinyin-0.4.1.tar.xz ];then
+wget -c https://download.fcitx-im.org/fcitx-sunpinyin/fcitx-sunpinyin-0.4.1.tar.xz --no-check-certificate
+fi
+if [ -f fcitx-sunpinyin-0.4.1.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{dumpsexp,hmac256,libgcrypt-config,mpicalc}
+rm -rfv $PORTS_DEST/lib/libgcrypt.so
+rm -rfv $PORTS_DEST/share/doc/libgcrypt-1.8.5
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

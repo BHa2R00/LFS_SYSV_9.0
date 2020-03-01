@@ -1,0 +1,15 @@
+if [ -f libgpg-error-1.36.tar.bz2 ];then
+tar xf libgpg-error-1.36.tar.bz2
+cd libgpg-error-1.36
+sed -i 's/namespace/pkg_&/' src/Makefile.{am,in} src/mkstrtable.awk
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

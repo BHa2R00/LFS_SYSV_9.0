@@ -1,0 +1,4 @@
+rm -rf libevdev-1.7.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

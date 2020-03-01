@@ -1,0 +1,14 @@
+if [ -f dejagnu-1.6.2.tar.gz ];then
+tar xf dejagnu-1.6.2.tar.gz
+cd dejagnu-1.6.2
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

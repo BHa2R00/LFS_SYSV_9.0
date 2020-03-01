@@ -1,0 +1,14 @@
+if [ -f libassuan-2.5.3.tar.bz2 ];then
+tar xf libassuan-2.5.3.tar.bz2
+cd libassuan-2.5.3
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

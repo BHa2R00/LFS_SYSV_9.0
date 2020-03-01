@@ -1,0 +1,4 @@
+rm -rf xterm-348
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

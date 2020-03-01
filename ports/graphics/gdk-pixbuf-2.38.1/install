@@ -1,0 +1,16 @@
+if [ -f gdk-pixbuf-2.38.1.tar.xz ];then
+tar xf gdk-pixbuf-2.38.1.tar.xz
+cd gdk-pixbuf-2.38.1
+mkdir build &&
+cd build &&
+meson --prefix=$PORTS_DEST -Dman=false ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

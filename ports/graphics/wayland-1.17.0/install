@@ -1,0 +1,14 @@
+if [ -f wayland-1.17.0.tar.xz ];then
+tar xf wayland-1.17.0.tar.xz
+cd wayland-1.17.0
+./configure --prefix=$PORTS_DEST --disable-static --disable-documentation
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

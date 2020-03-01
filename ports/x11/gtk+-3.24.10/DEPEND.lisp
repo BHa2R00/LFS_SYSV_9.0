@@ -1,0 +1,10 @@
+(
+ "accessibility/at-spi2-atk-2.32.0/"
+ "converters/fribidi-1.0.5/"
+ "graphics/gdk-pixbuf-2.38.1/"
+ "graphics/libepoxy-1.5.3/"
+ "x11-toolkits/pango-1.42.4/"
+ "x11/libxkbcommon-0.8.4/"
+ "graphics/wayland-1.17.0/"
+ "graphics/wayland-protocols-1.18/"
+ )

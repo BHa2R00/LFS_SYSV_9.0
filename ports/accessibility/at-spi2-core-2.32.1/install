@@ -1,0 +1,16 @@
+if [ -f at-spi2-core-2.32.1.tar.xz ];then
+tar xf at-spi2-core-2.32.1.tar.xz
+cd at-spi2-core-2.32.1
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST --sysconfdir=/etc -Dsystemd_user_dir=no ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

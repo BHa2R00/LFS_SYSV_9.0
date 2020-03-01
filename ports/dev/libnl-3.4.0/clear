@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{genl-ctrl-list,idiag-socket-details,nl-*,nf-*}
+rm -rfv $PORTS_DEST/lib/{libnl-*}
+rm -rfv $PORTS_DEST/include/libnl3
+rm -rfv $PORTS_DEST/lib/libnl
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,19 @@
+if [ ! -f llvm-8.0.1.src.tar.xz ];then
+wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/llvm-8.0.1.src.tar.xz --no-check-certificate
+fi
+if [ ! -f cfe-8.0.1.src.tar.xz ];then
+#wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/cfe-8.0.1.src.tar.xz --no-check-certificate
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/cfe-8.0.1.src.tar.xz
+fi
+if [ ! -f compiler-rt-8.0.1.src.tar.xz ];then
+wget -c https://github.com/llvm/llvm-project/releases/download/llvmorg-8.0.1/compiler-rt-8.0.1.src.tar.xz --no-check-certificate
+fi
+if [ -f llvm-8.0.1.src.tar.xz ]&&[ -f cfe-8.0.1.src.tar.xz ]&&[ -f compiler-rt-8.0.1.src.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

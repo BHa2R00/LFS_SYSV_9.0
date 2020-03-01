@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{pcregrep,pcretest,pcre-config}
+rm -rfv $PORTS_DEST/lib/{libpcre.so,libpcre16.so,libpcre32.so,libpcrecpp.so,libpcreposix.so}
+rm -rfv $PORTS_DEST/share/doc/pcre-8.43
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

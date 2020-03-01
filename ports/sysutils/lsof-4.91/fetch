@@ -1,0 +1,12 @@
+if [ ! -f lsof_4.91.tar.gz ];then
+wget -c https://www.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_4.91.tar.gz --no-check-certificate
+fi
+if [ -f lsof_4.91.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

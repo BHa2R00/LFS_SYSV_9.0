@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{isdv4-serial-debugger,isdv4-serial-inputattach,xsetwacom}
+rm -rfv $PORTS_DEST/lib/xorg/modules/input/wacom_drv.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

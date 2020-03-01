@@ -1,0 +1,14 @@
+if [ -f alsa-plugins-1.1.9.tar.bz2 ];then
+tar xf alsa-plugins-1.1.9.tar.bz2
+cd alsa-plugins-1.1.9
+./configure --prefix=$PORTS_DEST --sysconfdir=/etc
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

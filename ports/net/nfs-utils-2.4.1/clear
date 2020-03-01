@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/sbin/{exportfs,mountstats}
+rm -rfv /sbin/{mount.nfs,mount.nfs4}
+rm -rfv /var/lib/nfs
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,13 @@
+if [ ! -f libunistring-0.9.10.tar.xz ];then
+wget -c https://ftp.gnu.org/gnu/libunistring/libunistring-0.9.10.tar.xz --no-check-certificate
+#wget -c ftp://ftp.gnu.org/gnu/libunistring/libunistring-0.9.10.tar.xz --no-check-certificate
+fi
+if [ -f libunistring-0.9.10.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

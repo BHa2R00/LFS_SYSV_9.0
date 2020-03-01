@@ -1,0 +1,14 @@
+if [ -f git-2.23.0.tar.xz ];then
+tar xf git-2.23.0.tar.xz
+cd git-2.23.0
+./configure --prefix=$PORTS_DEST --with-gitconfig=/etc/gitconfig
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

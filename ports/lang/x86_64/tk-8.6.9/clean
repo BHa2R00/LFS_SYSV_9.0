@@ -1,0 +1,4 @@
+rm -rf tk8.6.9
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

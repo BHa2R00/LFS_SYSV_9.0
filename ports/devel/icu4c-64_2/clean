@@ -1,0 +1,4 @@
+rm -rf icu
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

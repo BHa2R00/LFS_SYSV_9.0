@@ -1,0 +1,14 @@
+if [ ! -f xf86-video-vesa-2.4.0.tar.bz2 ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/xf86-video-vesa-2.4.0.tar.bz2
+#wget -c http://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/xf86-video-intel-20190723.tar.xz --no-check-certificate
+#wget -c ftp://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/xf86-video-intel-20190723.tar.xz --no-check-certificate
+fi
+if [ -f xf86-video-vesa-2.4.0.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

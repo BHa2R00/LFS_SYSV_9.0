@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/feh
+rm -rfv $PORTS_DEST/share/{doc/feh-3.2.1,share/feh}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

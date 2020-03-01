@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libmad.so
+rm -rfv $PORTS_DEST/lib/pkgconfig/mad.pc
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,17 @@
+if [ -f xf86-video-vesa-2.4.0.tar.bz2 ];then
+tar xf xf86-video-vesa-2.4.0.tar.bz2
+cd xf86-video-vesa-2.4.0
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+./configure $XORG_CONFIG
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

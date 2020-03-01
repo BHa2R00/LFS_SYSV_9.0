@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{libpng-config,libpng16-config,pngfix,png-fix-itxt}
+rm -rfv $PORTS_DEST/lib/libpng.so
+rm -rfv $PORTS_DEST/include/libpng16
+rm -rfv $PORTS_DEST/share/doc/libpng-1.6.37
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

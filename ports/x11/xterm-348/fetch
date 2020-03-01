@@ -1,0 +1,12 @@
+if [ ! -f xterm-348.tgz ];then
+wget -c http://invisible-mirror.net/archives/xterm/xterm-348.tgz --no-check-certificate
+fi
+if [ -f xterm-348.tgz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,14 @@
+if [ ! -f gtk+-2.24.32.tar.xz ];then
+wget -c 'http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/gtk%2B-2.24.32.tar.xz'
+#wget -c http://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz --no-check-certificate
+#wget -c ftp://ftp.gnome.org/pub/gnome/sources/gtk+/2.24/gtk+-2.24.32.tar.xz --no-check-certificate
+fi
+if [ -f gtk+-2.24.32.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,16 @@
+if [ -f libxslt-1.1.33.tar.gz ]&&[ -f libxslt-1.1.33-security_fix-1.patch ];then
+tar xf libxslt-1.1.33.tar.gz
+cd libxslt-1.1.33
+patch -Np1 -i ../libxslt-1.1.33-security_fix-1.patch
+sed -i s/3000/5000/ libxslt/transform.c doc/xsltproc.{1,xml}
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

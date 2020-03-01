@@ -1,0 +1,17 @@
+if [ -f conky-1.10.8.tar.gz ];then
+tar xf conky-1.10.8.tar.gz
+cd conky-1.10.8
+mkdir -pv build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=$PORTS_DEST ..
+#ccmake ..
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../../R
+fi

@@ -1,0 +1,14 @@
+if [ -f cpio-2.12.tar.bz2 ];then
+tar xf cpio-2.12.tar.bz2
+cd cpio-2.12
+./configure --prefix=$PORTS_DEST --bindir=/bin --enable-mt --with-rmt=$PORTS_DEST/libexec/rmt
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

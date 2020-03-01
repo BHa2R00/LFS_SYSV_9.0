@@ -1,0 +1,37 @@
+if [ -f krb5-1.17.tar.gz ];then
+tar xf krb5-1.17.tar.gz
+cd krb5-1.17
+cd src &&
+sed -i -e 's@\^u}@^u cols 300}@' tests/dejagnu/config/default.exp     &&
+sed -i -e '/eq 0/{N;s/12 //}'    plugins/kdb/db2/libdb2/test/run.test &&
+./configure --prefix=$PORTS_DEST     \
+            --sysconfdir=/etc        \
+            --localstatedir=/var/lib \
+            --with-system-et         \
+            --with-system-ss         \
+            --with-system-verto=no   \
+            --enable-dns-for-realm
+make $PORTS_JOBS
+make install
+for f in gssapi_krb5 gssrpc k5crypto kadm5clnt kadm5srv \
+         kdb5 kdb_ldap krad krb5 krb5support verto ; do
+    find $PORTS_DEST/lib -type f -name "lib$f*.so*" -exec chmod -v 755 {} \;    
+done
+mv -v $PORTS_DEST/lib/libkrb5.so.3*        /lib &&
+mv -v $PORTS_DEST/lib/libk5crypto.so.3*    /lib &&
+mv -v $PORTS_DEST/lib/libkrb5support.so.0* /lib &&
+ln -v -sf ../../lib/libkrb5.so.3.3        $PORTS_DEST/lib/libkrb5.so        &&
+ln -v -sf ../../lib/libk5crypto.so.3.1    $PORTS_DEST/lib/libk5crypto.so    &&
+ln -v -sf ../../lib/libkrb5support.so.0.1 $PORTS_DEST/lib/libkrb5support.so &&
+mv -v $PORTS_DEST/bin/ksu /bin &&
+chmod -v 755 /bin/ksu   &&
+install -v -dm755 $PORTS_DEST/share/doc/krb5-1.17 &&
+cp -vfr ../doc/*  $PORTS_DEST/share/doc/krb5-1.17
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

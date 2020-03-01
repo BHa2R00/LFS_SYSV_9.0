@@ -1,0 +1,4 @@
+rm -rf giblib-1.2.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

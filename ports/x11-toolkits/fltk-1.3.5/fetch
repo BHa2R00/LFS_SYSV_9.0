@@ -1,0 +1,12 @@
+if [ ! -f fltk-1.3.5-source.tar.gz ];then
+wget -c http://fltk.org/pub/fltk/1.3.5/fltk-1.3.5-source.tar.gz --no-check-certificate
+fi
+if [ -f fltk-1.3.5-source.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

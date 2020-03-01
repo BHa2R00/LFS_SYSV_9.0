@@ -1,0 +1,17 @@
+if [ -f libpng-1.6.37.tar.xz ]&&[ -f libpng-1.6.37-apng.patch.gz ];then
+tar xf libpng-1.6.37.tar.xz
+cd libpng-1.6.37
+gzip -cd ../libpng-1.6.37-apng.patch.gz | patch -p1
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+mkdir -v $PORTS_DEST/share/doc/libpng-1.6.37
+cp -v README libpng-manual.txt $PORTS_DEST/share/doc/libpng-1.6.37
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

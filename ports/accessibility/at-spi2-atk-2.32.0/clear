@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/{libatk-bridge-2.0.so,gtk-2.0/modules/libatk-bridge.so}
+rm -rfv $PORTS_DEST/include/at-spi2-atk
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,13 @@
+if [ ! -f mesa-19.1.4.tar.xz ];then
+wget -c https://mesa.freedesktop.org/archive/mesa-19.1.4.tar.xz --no-check-certificate
+#wget -c ftp://ftp.freedesktop.org/pub/mesa/mesa-19.1.4.tar.xz --no-check-certificate
+fi
+if [ -f mesa-19.1.4.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

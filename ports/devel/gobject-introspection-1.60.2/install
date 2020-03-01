@@ -1,0 +1,16 @@
+if [ -f gobject-introspection-1.60.2.tar.xz ];then
+tar xf gobject-introspection-1.60.2.tar.xz
+cd gobject-introspection-1.60.2
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../../R
+fi

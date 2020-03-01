@@ -1,0 +1,4 @@
+rm -rf Python-2.7.16
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{2to3,idle3,pip3,pydoc3,python3,python3-config,pyvenv}
+rm -rfv $PORTS_DEST/lib/{libpython3.7m.so,libpython3.so}
+rm -rfv $PORTS_DEST/include/python3.7m
+rm -rfv $PORTS_DEST/lib/python3.7
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

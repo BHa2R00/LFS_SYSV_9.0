@@ -1,0 +1,4 @@
+rm -rf llvm-8.0.1.src
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,15 @@
+if [ -f yasm-1.3.0.tar.gz ];then
+tar xf yasm-1.3.0.tar.gz
+cd yasm-1.3.0
+sed -i 's#) ytasm.*#)#' Makefile.in
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

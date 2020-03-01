@@ -1,0 +1,18 @@
+if [ -f unbound-1.9.2.tar.gz ];then
+tar xf unbound-1.9.2.tar.gz
+cd unbound-1.9.2
+groupadd -g 88 unbound &&
+useradd -c "Unbound DNS resolver" -d /var/lib/unbound -u 88 \
+        -g unbound -s /bin/false unbound
+./configure --prefix=$PORTS_DEST --sysconfdir=/etc --disable-static --with-pidfile=/run/unbound.pid
+make $PORTS_JOBS
+make install
+mv -v $PORTS_DEST/sbin/unbound-host $PORTS_DEST/bin/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

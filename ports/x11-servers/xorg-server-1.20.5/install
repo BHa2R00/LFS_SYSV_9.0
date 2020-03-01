@@ -1,0 +1,22 @@
+if [ -f xorg-server-1.20.5.tar.bz2 ];then
+tar xf xorg-server-1.20.5.tar.bz2
+cd xorg-server-1.20.5
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+./configure $XORG_CONFIG            \
+            --enable-glamor         \
+            --enable-suid-wrapper   \
+            --with-xkb-output=/var/lib/xkb
+make $PORTS_JOBS
+make install
+mkdir -pv /etc/X11/xorg.conf.d
+cp -v ../createfiles /etc/sysconfig/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

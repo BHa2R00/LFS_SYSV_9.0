@@ -1,0 +1,12 @@
+if [ ! -f iso-codes-4.3.tar.xz ];then
+wget -c http://anduin.linuxfromscratch.org/BLFS/iso-codes/iso-codes-4.3.tar.xz --no-check-certificate
+fi
+if [ -f iso-codes-4.3.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

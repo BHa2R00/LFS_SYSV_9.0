@@ -1,0 +1,13 @@
+if [ -f zip30.tar.gz ];then
+tar xf zip30.tar.gz
+cd zip30
+make $PORTS_JOBS -f unix/Makefile generic_gcc
+make prefix=$PORTS_DEST MANDIR=$PORTS_DEST/share/man/man1 -f unix/Makefile install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,9 @@
+for f in $(grep -v '^#' ./legacy.dat | awk '{print $2$3}')
+do
+	if [ ! -f $f ];then
+		wget -c --no-check-certificate https://www.x.org/pub/individual/$f
+	fi
+done
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

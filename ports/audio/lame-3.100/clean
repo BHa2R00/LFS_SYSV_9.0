@@ -1,0 +1,4 @@
+rm -rf lame-3.100
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

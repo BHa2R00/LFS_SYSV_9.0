@@ -1,0 +1,14 @@
+if [ -f fdk-aac-2.0.0.tar.gz ];then
+tar xf fdk-aac-2.0.0.tar.gz
+cd fdk-aac-2.0.0
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

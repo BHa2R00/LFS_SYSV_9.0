@@ -1,0 +1,48 @@
+#mkdir lib
+#cd lib
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+for package in $(grep -v '^#' ./lib-7.md5 | awk '{print $2}')
+do
+  if [ ! -f $package ];then
+  	echo 'FETCH-ERROR'
+  	echo 'FETCH-ERROR' >./R
+	exit 1
+  else
+  	echo 'NIL'
+  	echo 'NIL' >./R
+  fi
+  packagedir=${package%.tar.bz2}
+  tar -xf $package
+  pushd $packagedir
+  case $packagedir in
+    libICE* )
+      ./configure $XORG_CONFIG ICE_LIBS=-lpthread
+    ;;
+
+    libXfont2-[0-9]* )
+      ./configure $XORG_CONFIG --disable-devel-docs
+    ;;
+
+    libXt-[0-9]* )
+      ./configure $XORG_CONFIG \
+                  --with-appdefaultdir=/etc/X11/app-defaults
+    ;;
+
+    * )
+      ./configure $XORG_CONFIG
+    ;;
+  esac
+  make $PORTS_JOBS
+  #make
+  #make check 2>&1 | tee ../$packagedir-make_check.log
+#  as_root make install
+  make install
+  popd
+  rm -rf $packagedir
+#  as_root /sbin/ldconfig
+  /sbin/ldconfig
+  echo 'NIL'
+  echo 'NIL' >./R
+done

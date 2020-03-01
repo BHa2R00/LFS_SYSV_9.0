@@ -1,0 +1,16 @@
+if [ -f atk-2.32.0.tar.xz ];then
+tar xf atk-2.32.0.tar.xz
+cd atk-2.32.0
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

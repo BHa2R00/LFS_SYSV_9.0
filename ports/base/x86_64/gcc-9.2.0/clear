@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{c++,cc,cpp,g++,gcc,gcc-ar,gcc-nm,gcc-ranlib,gcov,gcov-dump,gcov-tool,gfortran}
+rm -rfv $PORTS_DEST/lib/{libcc1.so,libgcc_s.so,libgomp.so,libstdc++.so,gcc}
+rm -rfv $PORTS_DEST/libexec/gcc
+rm -rfv $PORTS_DEST/share/gcc-9.2.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

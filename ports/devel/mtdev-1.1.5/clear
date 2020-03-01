@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/mtdev-test
+rm -rfv $PORTS_DEST/lib/libmtdev.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

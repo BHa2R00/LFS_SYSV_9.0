@@ -1,0 +1,16 @@
+if [ -f libnsl-1.2.0.tar.gz ];then
+tar xf libnsl-1.2.0.tar.gz
+cd libnsl-1.2.0
+autoreconf -fi
+./configure --sysconfdir=/etc
+make install
+mv $PORTS_DEST/lib/libnsl.so.2* /lib
+ln -sfv ../../lib/libnsl.so.2.0.0 $PORTS_DEST/lib/libnsl.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

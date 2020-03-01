@@ -1,0 +1,14 @@
+if [ -f dpkg_1.19.0.5.tar.xz ];then
+tar xf dpkg_1.19.0.5.tar.xz
+cd dpkg-1.19.0.5
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,12 @@
+if [ ! -f libxkbcommon-0.8.4.tar.xz ];then
+wget -c https://xkbcommon.org/download/libxkbcommon-0.8.4.tar.xz --no-check-certificate
+fi
+if [ -f libxkbcommon-0.8.4.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

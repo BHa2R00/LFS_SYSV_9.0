@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/bin/conky
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

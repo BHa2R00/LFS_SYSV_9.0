@@ -1,0 +1,17 @@
+if [ -f glib-2.60.6.tar.xz ]&&[ -f glib-2.60.6-skip_warnings-1.patch ];then
+tar xf glib-2.60.6.tar.xz
+cd glib-2.60.6
+patch -Np1 -i ../glib-2.60.6-skip_warnings-1.patch
+mkdir build &&
+cd    build &&
+meson --prefix=$PORTS_DEST -Dman=false -Dselinux=disabled ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

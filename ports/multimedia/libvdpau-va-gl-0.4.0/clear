@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/lib/xorg/modules/libvdpau_va_gl.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/sbcl
+rm -rfv $PORTS_DEST/lib/sbcl
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

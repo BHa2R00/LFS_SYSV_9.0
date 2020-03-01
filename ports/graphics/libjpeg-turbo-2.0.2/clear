@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{cjpeg,djpeg,jpegtran,rdjpgcom,tjbench,wrjpgcom}
+rm -rfv $PORTS_DEST/lib/{libjpeg.so,libturbojpeg.so}
+rm -rfv $PORTS_DEST/share/doc/libjpeg-turbo-2.0.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

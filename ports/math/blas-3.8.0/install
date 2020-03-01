@@ -1,0 +1,15 @@
+if [ -f blas-3.8.0.tgz ];then
+tar xf blas-3.8.0.tgz
+cd BLAS-3.8.0
+make FORTRAN="gfortran -m64 -fPIC" $PORTS_JOBS
+ld -shared -o libblas.so *.o
+mv -v blas_LINUX.a $PORTS_DEST/lib/libblas.a
+mv -v libblas.so $PORTS_DEST/lib/libblas.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

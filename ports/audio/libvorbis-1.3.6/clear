@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/libvorbis*.so
+rm -rfv $PORTS_DEST/include/vorbis
+rm -rfv $PORTS_DEST/share/doc/libvorbis-1.3.6
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

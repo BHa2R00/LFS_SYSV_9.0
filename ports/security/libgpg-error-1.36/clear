@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{gpg-error,gpg-error-config,gpgrt-config,yat2m}
+rm -rfv $PORTS_DEST/lib/libgpg-error.so
+rm -rfv $PORTS_DEST/share/{common-lisp/source/gpg-error,libgpg-error,doc/libgpg-error-1.36}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

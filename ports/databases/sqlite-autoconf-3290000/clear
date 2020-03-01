@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/sqlite3
+rm -rfv $PORTS_DEST/lib/libsqlite3.so
+rm -rfv $PORTS_DEST/share/doc/sqlite-3.29.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

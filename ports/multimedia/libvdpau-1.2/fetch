@@ -1,0 +1,12 @@
+if [ ! -f libvdpau-1.2.tar.bz2 ];then
+wget -c https://gitlab.freedesktop.org/vdpau/libvdpau/uploads/14b620084c027d546fa0b3f083b800c6/libvdpau-1.2.tar.bz2 --no-check-certificate
+fi
+if [ -f libvdpau-1.2.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

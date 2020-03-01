@@ -1,0 +1,8 @@
+rm -rfv $PORTS_DEST/bin/{derb,escapesrc,genbrk,genccode,gencfu,gencmn,gencnval,gendict,gennorm2,genrb,gensprep,icu-config,icuinfo,icupkg,makeconv,pkgdata,uconv}
+rm -rfv $PORTS_DEST/lib/libicu*.so
+rm -rfv $PORTS_DEST/include/unicode
+rm -rfv $PORTS_DEST/lib/icu
+rm -rfv $PORTS_DEST/share/icu
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

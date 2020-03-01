@@ -1,0 +1,17 @@
+if [ -f xcursor-themes-1.0.6.tar.bz2 ];then
+tar xf xcursor-themes-1.0.6.tar.bz2
+cd xcursor-themes-1.0.6
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+./configure $XORG_CONFIG
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

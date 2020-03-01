@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{gst-device-monitor-1.0,gst-discoverer-1.0,gst-play-1.0}
+rm -rfv $PORTS_DEST/lib/{libgstallocators-1.0.so,libgstapp-1.0.so,libgstaudio-1.0.so,libgstfft-1.0.so,libgstgl-1.0.so,libgstpbutils-1.0.so,libgstriff-1.0.so,libgstrtp-1.0.so,libgstrtsp-1.0.so,libgstsdp-1.0.so,libgsttag-1.0.so,libgstvideo-1.0.so}
+rm -rfv $PORTS_DEST/include/gstreamer-1.0/gst/{allocators,app,audio,fft,gl,pbutils,riff,rtp,rtsp,sdp,tag,video}
+rm -rfv $PORTS_DEST/share/{gst-plugins-base,gtk-doc/html/gst-plugins-base-{libs,plugins}-1.0}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

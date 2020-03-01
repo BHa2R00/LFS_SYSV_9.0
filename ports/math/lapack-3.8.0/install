@@ -1,0 +1,16 @@
+if [ -f lapack-3.8.0.tar.gz ];then
+tar xf lapack-3.8.0.tar.gz
+cd lapack-3.8.0
+cp -v make.inc.example make.inc
+make FORTRAN="gfortran -m64 -fPIC" $PORTS_JOBS
+ld -shared -o liblapack.so SRC/*.o
+cp -v liblapack.a $PORTS_DEST/lib/
+cp -v liblapack.so $PORTS_DEST/lib/
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

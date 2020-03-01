@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{pango-list,pango-view}
+rm -rfv $PORTS_DEST/lib/libpango*
+rm -rfv $PORTS_DEST/include/pango-1.0
+rm -rfv $PORTS_DEST/share/{installed-tests/pango,gtk-doc/html/pango}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

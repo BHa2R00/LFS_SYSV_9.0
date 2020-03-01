@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/update-mime-database
+rm -rfv $PORTS_DEST/share/mime
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

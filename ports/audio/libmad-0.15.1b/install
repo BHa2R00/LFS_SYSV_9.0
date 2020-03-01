@@ -1,0 +1,19 @@
+if [ -f libmad-0.15.1b.tar.gz ]&&[ -f libmad-0.15.1b-fixes-1.patch ];then
+tar xf libmad-0.15.1b.tar.gz
+cd libmad-0.15.1b
+patch -Np1 -i ../libmad-0.15.1b-fixes-1.patch
+sed "s@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@g" -i configure.ac
+touch NEWS AUTHORS ChangeLog
+autoreconf -fi
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+cp -v ../mad.pc $PORTS_DEST/lib/pkgconfig/
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

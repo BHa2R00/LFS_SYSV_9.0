@@ -1,0 +1,12 @@
+if [ ! -f blas-3.8.0.tgz ];then
+wget -c http://www.netlib.org/blas/blas-3.8.0.tgz --no-check-certificate
+fi
+if [ -f blas-3.8.0.tgz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

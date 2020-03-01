@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{cairo-sphinx,cairo-trace}
+rm -rfv $PORTS_DEST/lib/{libcairo.so,libcairo-gobject.so,libcairo-script-interpreter.so,cairo}
+rm -rfv $PORTS_DEST/include/cairo
+rm -rfv $PORTS_DEST/share/gtk-doc/html
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

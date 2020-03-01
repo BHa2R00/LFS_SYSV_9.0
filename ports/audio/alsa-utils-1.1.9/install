@@ -1,0 +1,14 @@
+if [ -f alsa-utils-1.1.9.tar.bz2 ];then
+tar xf alsa-utils-1.1.9.tar.bz2
+cd alsa-utils-1.1.9
+./configure --prefix=$PORTS_DEST --disable-alsaconf --disable-bat --disable-xmlto --with-curses=ncursesw
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

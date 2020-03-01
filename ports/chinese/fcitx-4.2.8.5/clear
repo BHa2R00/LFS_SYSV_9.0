@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/fcitx*
+rm -rfv $PORTS_DEST/lib/libfcitx*.so.*
+rm -rfv $PORTS_DEST/include/{fcitx,fcitx-config,fcitx-gclient,fcitx-utils}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{wish,wish8.6}
+rm -rfv $PORTS_DEST/lib/{libtk8.6.so,libtkstub8.6.a,tk8.6}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

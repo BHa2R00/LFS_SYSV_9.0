@@ -1,0 +1,21 @@
+if [ -f xorgproto-2019.1.tar.bz2 ];then
+tar xf xorgproto-2019.1.tar.bz2
+cd xorgproto-2019.1
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+mkdir build &&
+cd    build &&
+meson --prefix=$XORG_PREFIX .. &&
+ninja
+ninja install
+install -vdm 755 $XORG_PREFIX/share/doc/xorgproto-2019.1 &&
+install -vm 644 ../[^m]*.txt ../PM_spec $XORG_PREFIX/share/doc/xorgproto-2019.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

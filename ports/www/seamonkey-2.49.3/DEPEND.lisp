@@ -1,0 +1,9 @@
+(
+ "devel/autoconf-2.13/"
+ "x11/gtk+-2.24.32/"
+ "archivers/unzip-6.0/"
+ "devel/yasm-1.3.0/"
+ "archivers/zip-3.0/"
+ "security/x86_64/nss-3.45/"
+ "devel/x86_64/nspr-4.21/"
+ )

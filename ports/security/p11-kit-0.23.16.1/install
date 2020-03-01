@@ -1,0 +1,19 @@
+if [ -f p11-kit-0.23.16.1.tar.gz ];then
+tar xf p11-kit-0.23.16.1.tar.gz
+cd p11-kit-0.23.16.1
+sed '20,$ d' -i trust/trust-extract-compat.in
+echo $PORTS_DEST/libexec/make-ca/copy-trust-modifications >> trust/trust-extract-compat.in
+echo $PORTS_DEST'/sbin/make-ca -f -g' >> trust/trust-extract-compat.in
+./configure --prefix=$PORTS_DEST --sysconfdir=/etc --with-trust-paths=/etc/pki/anchors
+make $PORTS_JOBS
+make install
+ln -sfv $PORTS_DEST/libexec/p11-kit/trust-extract-compat \
+        $PORTS_DEST/bin/update-ca-certificates
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

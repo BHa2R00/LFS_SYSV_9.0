@@ -1,0 +1,24 @@
+if [ -f xf86-video-intel-20190723.tar.xz ];then
+tar xf xf86-video-intel-20190723.tar.xz
+cd xf86-video-intel-20190723
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+./autogen.sh $XORG_CONFIG     \
+            --enable-kms-only \
+            --enable-uxa      \
+            --mandir=$PORTS_DEST/share/man
+make $PORTS_JOBS
+make install
+mv -v $PORTS_DEST/share/man/man4/intel-virtual-output.4 \
+      $PORTS_DEST/share/man/man1/intel-virtual-output.1 &&
+sed -i '/\.TH/s/4/1/' $PORTS_DEST/share/man/man1/intel-virtual-output.1
+cp -v ../20-intel.conf /etc/X11/xorg.conf.d/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

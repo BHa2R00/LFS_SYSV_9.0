@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{bugpoint,c-index-test,clang*,diagtool,dsymutil,git-clang-format,hmap-tool,llc,lli,llvm-*,obj2yaml,opt,sancov,sanstats,scan-build,scan-view,verify-uselistorder,yaml2obj}
+rm -rfv $PORTS_DEST/lib/{libLLVM.so,libLLVM*.a,libLTO.so,libclang.so,libclang*.a,cmake/llvm,cmake/clang}
+rm -rfv $PORTS_DEST/include/{llvm,llvm-c,clang,clang-c}
+rm -rfv $PORTS_DEST/share/{clang,opt-viewer,scan-build,scan-view,doc/llvm-8.0.1}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

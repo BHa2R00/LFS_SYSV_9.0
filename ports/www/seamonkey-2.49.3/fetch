@@ -1,0 +1,12 @@
+if [ ! -f seamonkey-2.49.3.source.tar.xz ];then
+wget -c http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/seamonkey-2.49.3.source.tar.xz --no-check-certificate
+fi
+if [ -f seamonkey-2.49.3.source.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

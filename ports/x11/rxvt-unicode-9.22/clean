@@ -1,0 +1,4 @@
+rm -rf rxvt-unicode-9.22
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

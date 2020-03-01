@@ -1,0 +1,13 @@
+if [ -f make-ca-1.4.tar.xz ];then
+tar xf make-ca-1.4.tar.xz
+cd make-ca-1.4
+make install
+install -vdm755 /etc/ssl/local
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

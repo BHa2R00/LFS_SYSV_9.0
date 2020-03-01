@@ -1,0 +1,12 @@
+if [ ! -f xf86-input-wacom-0.37.0.tar.bz2 ];then
+wget -c https://github.com/linuxwacom/xf86-input-wacom/releases/download/xf86-input-wacom-0.37.0/xf86-input-wacom-0.37.0.tar.bz2 --no-check-certificate
+fi
+if [ -f xf86-input-wacom-0.37.0.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

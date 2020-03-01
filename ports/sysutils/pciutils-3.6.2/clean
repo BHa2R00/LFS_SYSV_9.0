@@ -1,0 +1,4 @@
+rm -rf pciutils-3.6.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

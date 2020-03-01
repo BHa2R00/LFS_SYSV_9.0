@@ -1,0 +1,13 @@
+if [ ! -f xcursor-themes-1.0.6.tar.bz2 ];then
+wget -c https://www.x.org/pub/individual/data/xcursor-themes-1.0.6.tar.bz2 --no-check-certificate
+#wget -c ftp://ftp.x.org/pub/individual/data/xcursor-themes-1.0.6.tar.bz2 --no-check-certificate
+fi
+if [ -f xcursor-themes-1.0.6.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

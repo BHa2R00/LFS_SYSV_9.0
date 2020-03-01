@@ -1,0 +1,16 @@
+if [ -f fribidi-1.0.5.tar.bz2 ];then
+tar xf fribidi-1.0.5.tar.bz2
+cd fribidi-1.0.5
+mkdir build &&
+cd build    &&
+meson --prefix=$PORTS_DEST ..
+ninja
+ninja install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../../R
+fi

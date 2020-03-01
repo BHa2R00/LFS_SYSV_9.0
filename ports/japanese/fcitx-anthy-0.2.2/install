@@ -1,0 +1,17 @@
+if [ -f fcitx-anthy-0.2.2.tar.xz ];then
+tar xf fcitx-anthy-0.2.2.tar.xz
+cd fcitx-anthy-0.2.2
+mkdir build
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=$PORTS_DEST -DENABLE_STATIC=Off ..
+make $PORTS_JOBS
+make install
+gtk-update-icon-cache -q -t -f $PORTS_DEST/share/icons/hicolor
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

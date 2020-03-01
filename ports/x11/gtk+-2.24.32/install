@@ -1,0 +1,16 @@
+if [ -f gtk+-2.24.32.tar.xz ];then
+tar xf gtk+-2.24.32.tar.xz
+cd gtk+-2.24.32
+sed -e 's#l \(gtk-.*\).sgml#& -o \1#' \
+    -i docs/{faq,tutorial}/Makefile.in      &&
+./configure --prefix=$PORTS_DEST --sysconfdir=/etc
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

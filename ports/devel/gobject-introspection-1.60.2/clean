@@ -1,0 +1,4 @@
+rm -rf gobject-introspection-1.60.2
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

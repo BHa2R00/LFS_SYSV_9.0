@@ -1,0 +1,4 @@
+rm -rf flwm
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

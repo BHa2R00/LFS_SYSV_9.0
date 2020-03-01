@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{addr2line,ar,as,c++filt,dwp,elfedit,gprof,ld,ld.bfd,ld.gold,nm,objcopy,objdump,ranlib,readelf,size,strings,strip}
+rm -rfv $PORTS_DEST/lib/{libbfd.so,libbfd.a,libopcodes.so,libopcodes.a,ldscripts}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

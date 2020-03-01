@@ -1,0 +1,12 @@
+if [ ! -f alsa-utils-1.1.9.tar.bz2 ];then
+wget -c ftp://ftp.alsa-project.org/pub/utils/alsa-utils-1.1.9.tar.bz2 --no-check-certificate
+fi
+if [ -f alsa-utils-1.1.9.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,4 @@
+rm -rf iso-codes-4.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

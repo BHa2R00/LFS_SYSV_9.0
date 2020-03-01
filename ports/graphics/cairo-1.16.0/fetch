@@ -1,0 +1,12 @@
+if [ ! -f cairo-1.16.0.tar.xz ];then
+wget -c https://www.cairographics.org/releases/cairo-1.16.0.tar.xz --no-check-certificate
+fi
+if [ -f cairo-1.16.0.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

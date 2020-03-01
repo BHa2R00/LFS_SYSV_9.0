@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/x265
+rm -rfv $PORTS_DEST/lib/libx265.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

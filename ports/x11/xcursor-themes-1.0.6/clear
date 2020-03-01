@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/share/icons/{handhelds,redglass,whiteglass}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

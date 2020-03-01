@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{autoexpect,autopasswd,cryptdir,decryptdir,dislocate,expect,ftp-rfc,kibitz,lpunlock,mkpasswd,passmass,rftp,rlogin-cwd,timed-read,timed-run,unbuffer,weather,multixterm,tknewsbiff,tkpasswd,xkibitz,xpstat}
+rm -rfv $PORTS_DEST/lib/{libexpect5.45.4.so,expect5.45.4}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

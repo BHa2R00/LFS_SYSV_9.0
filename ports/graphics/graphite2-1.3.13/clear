@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{gr2fonttest,comparerender}
+rm -rfv $PORTS_DEST/lib/libgraphite2.so
+rm -rfv $PORTS_DEST/include/graphite2
+rm -rfv $PORTS_DEST/share/{graphite2,doc/graphite2-1.3.13}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

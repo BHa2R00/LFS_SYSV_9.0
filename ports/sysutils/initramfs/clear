@@ -1,0 +1,5 @@
+rm -rfv /sbin/mkinitramfs
+rm -rfv $PORTS_DEST/share/mkinitramfs
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

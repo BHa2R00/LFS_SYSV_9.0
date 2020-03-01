@@ -1,0 +1,13 @@
+if [ -f flwm-0.25.tgz ];then
+tar xf flwm-0.25.tgz
+cd flwm
+sh ./compileit
+mv flwm $PORTS_DEST/bin/
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

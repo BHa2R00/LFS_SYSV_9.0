@@ -1,0 +1,12 @@
+if [ ! -f git-2.23.0.tar.xz ];then
+wget -c https://www.kernel.org/pub/software/scm/git/git-2.23.0.tar.xz --no-check-certificate
+fi
+if [ -f git-2.23.0.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

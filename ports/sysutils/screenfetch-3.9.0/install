@@ -1,0 +1,12 @@
+if [ -f screenfetch-3.9.0.tar.gz ];then
+tar xf screenfetch-3.9.0.tar.gz
+cd screenFetch-3.9.0
+cp -v ./screenfetch-dev $PORTS_DEST/bin/screenfetch
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

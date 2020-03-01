@@ -1,0 +1,17 @@
+if [ -f graphite2-1.3.13.tgz ];then
+tar xf graphite2-1.3.13.tgz
+cd graphite2-1.3.13
+sed -i '/cmptest/d' tests/CMakeLists.txt
+mkdir build &&
+cd    build &&
+cmake -DCMAKE_INSTALL_PREFIX=$PORTS_DEST ..
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

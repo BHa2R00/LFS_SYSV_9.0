@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{cvlc,nvlc,qvlc,rvlc,svlc,vlc,vlc-wrapper}
+rm -rfv $PORTS_DEST/lib/{libvlccore.so,libvlc.so,vlc/plugins,vlc}
+rm -rfv $PORTS_DEST/include/vlc
+rm -rfv $PORTS_DEST/share/{vlc,doc/vlc-3.0.8}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

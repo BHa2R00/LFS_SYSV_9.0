@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/runtest
+rm -rfv $PORTS_DEST/share/dejagnu
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

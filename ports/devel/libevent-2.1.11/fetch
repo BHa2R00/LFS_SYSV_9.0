@@ -1,0 +1,12 @@
+if [ ! -f libevent-2.1.11-stable.tar.gz ];then
+wget -c https://github.com/libevent/libevent/releases/download/release-2.1.11-stable/libevent-2.1.11-stable.tar.gz --no-check-certificate
+fi
+if [ -f libevent-2.1.11-stable.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

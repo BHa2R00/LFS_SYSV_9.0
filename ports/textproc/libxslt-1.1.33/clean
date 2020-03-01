@@ -1,0 +1,4 @@
+rm -rf libxslt-1.1.33
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

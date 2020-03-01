@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/sbin/vsftpd
+rm -rfv $PORTS_DEST/share/vsftpd
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

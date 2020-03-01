@@ -1,0 +1,4 @@
+rm -rf nss-3.45
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

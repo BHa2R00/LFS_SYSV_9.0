@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/share/{iso-codes,xml/iso-codes}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

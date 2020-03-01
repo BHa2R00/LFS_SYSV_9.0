@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{pip2,python2*}
+rm -rfv $PORTS_DEST/lib/{libpython2.7.so,python2.7}
+rm -rfv $PORTS_DEST/include/python2.7
+rm -rfv $PORTS_DEST/share/doc/python-2.7.16
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

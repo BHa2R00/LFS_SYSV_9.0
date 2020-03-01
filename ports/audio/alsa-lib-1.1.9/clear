@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/aserver
+rm -rfv $PORTS_DEST/lib/{libasound.so,alsa-lib/smixer,alsa-lib}
+rm -rfv $PORTS_DEST/include/alsa
+rm -rfv $PORTS_DEST/share/alsa
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

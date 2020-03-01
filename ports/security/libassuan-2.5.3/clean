@@ -1,0 +1,4 @@
+rm -rf libassuan-2.5.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

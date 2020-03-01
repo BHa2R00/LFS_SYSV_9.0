@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/dpkg*
+rm -rfv $PORTS_DEST/lib/libdpkg.a
+rm -rfv $PORTS_DEST/include/dpkg
+rm -rfv $PORTS_DEST/share/dpkg
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

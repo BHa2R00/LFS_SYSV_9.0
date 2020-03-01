@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libass.so
+rm -rfv $PORTS_DEST/include/ass
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

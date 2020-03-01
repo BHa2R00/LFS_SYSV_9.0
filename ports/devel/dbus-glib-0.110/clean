@@ -1,0 +1,4 @@
+rm -rf dbus-glib-0.110
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

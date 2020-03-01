@@ -1,0 +1,17 @@
+if [ -f libxkbcommon-0.8.4.tar.xz ];then
+tar xf libxkbcommon-0.8.4.tar.xz
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+cd libxkbcommon-0.8.4
+./configure $XORG_CONFIG --docdir=$PORTS_DEST/share/doc/libxkbcommon-0.8.4
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

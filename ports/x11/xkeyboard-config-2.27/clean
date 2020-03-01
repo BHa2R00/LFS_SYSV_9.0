@@ -1,0 +1,4 @@
+rm -rf xkeyboard-config-2.27
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

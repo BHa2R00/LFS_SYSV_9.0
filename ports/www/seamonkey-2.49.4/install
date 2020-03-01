@@ -1,0 +1,20 @@
+if [ -f seamonkey-2.49.4.source.tar.xz ];then
+tar xf seamonkey-2.49.4.source.tar.xz
+cd seamonkey-2.49.4
+cp -v ../mozconfig ./
+grep -rl -- '-Werror=format' | xargs sed -i 's/error=format/no-&/'
+sed -i -e '/pid_t gettid/,+3 s@^@//@' mozilla/tools/profiler/core/platform.h
+CC=gcc CXX=g++ \
+make $PORTS_JOBS -f client.mk
+make -f client.mk install INSTALL_SDK=
+chown -R 0:0 $PORTS_DEST/lib/seamonkey-2.49.4
+cp -v $(find -name seamonkey.1 | head -n1) $PORTS_DEST/share/man/man1
+make -C obj* install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

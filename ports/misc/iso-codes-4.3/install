@@ -1,0 +1,14 @@
+if [ -f iso-codes-4.3.tar.xz ];then
+tar xf iso-codes-4.3.tar.xz
+cd iso-codes-4.3
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

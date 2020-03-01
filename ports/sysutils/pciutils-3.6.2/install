@@ -1,0 +1,19 @@
+if [ -f pciutils-3.6.2.tar.xz ];then
+tar xf pciutils-3.6.2.tar.xz
+cd pciutils-3.6.2
+make PREFIX=$PORTS_DEST                \
+     SHAREDIR=$PORTS_DEST/share/hwdata \
+     SHARED=yes $PORTS_JOBS
+make PREFIX=$PORTS_DEST                \
+     SHAREDIR=$PORTS_DEST/share/hwdata \
+     SHARED=yes                 \
+     install install-lib
+chmod -v 755 $PORTS_DEST/lib/libpci.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

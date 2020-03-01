@@ -1,0 +1,12 @@
+if [ ! -f libepoxy-1.5.3.tar.xz ];then
+wget -c https://github.com/anholt/libepoxy/releases/download/1.5.3/libepoxy-1.5.3.tar.xz --no-check-certificate
+fi
+if [ -f libepoxy-1.5.3.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

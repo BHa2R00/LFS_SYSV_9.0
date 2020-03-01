@@ -1,0 +1,14 @@
+if [ -f rxvt-unicode-9.22.tar.bz2 ];then
+tar xf rxvt-unicode-9.22.tar.bz2
+cd rxvt-unicode-9.22
+./configure --prefix=$PORTS_DEST --enable-everything
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

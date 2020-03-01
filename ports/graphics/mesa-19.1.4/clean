@@ -1,0 +1,4 @@
+rm -rf mesa-19.1.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

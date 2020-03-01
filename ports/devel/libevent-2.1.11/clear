@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/event_rpcgen.py
+rm -rfv $PORTS_DEST/lib/libevent*.so
+rm -rfv $PORTS_DEST/include/event2
+rm -rfv $PORTS_DEST/share/doc/libevent-2.1.11
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

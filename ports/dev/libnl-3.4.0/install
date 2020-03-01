@@ -1,0 +1,16 @@
+if [ -f libnl-3.4.0.tar.gz ];then
+tar xf libnl-3.4.0.tar.gz
+cd libnl-3.4.0
+./configure --prefix=$PORTS_DEST     \
+            --sysconfdir=/etc \
+            --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

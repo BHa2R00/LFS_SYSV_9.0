@@ -1,0 +1,12 @@
+if [ ! -f fribidi-1.0.5.tar.bz2 ];then
+wget -c https://github.com/fribidi/fribidi/releases/download/v1.0.5/fribidi-1.0.5.tar.bz2 --no-check-certificate
+fi
+if [ -f fribidi-1.0.5.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

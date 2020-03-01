@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{sqlite3_analyzer,tclsh,tclsh8.6}
+rm -rfv $PORTS_DEST/lib/{libtcl8.6.so,libtclstub8.6.a,itcl4.1.2,sqlite3.25.3,tcl8,tcl8.6,tdbc1.1.0,tdbcmysql1.1.0,tdbcodbc1.1.0,tdbcpostgres1.1.0,thread2.8.4}
+rm -rfv $PORTS_DEST/share/{doc/tcl-8.6.9,man/mann}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

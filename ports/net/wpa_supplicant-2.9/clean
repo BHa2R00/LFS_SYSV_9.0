@@ -1,0 +1,4 @@
+rm -rf wpa_supplicant-2.9
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

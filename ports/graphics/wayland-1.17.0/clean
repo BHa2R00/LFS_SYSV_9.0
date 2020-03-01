@@ -1,0 +1,4 @@
+rm -rf wayland-1.17.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

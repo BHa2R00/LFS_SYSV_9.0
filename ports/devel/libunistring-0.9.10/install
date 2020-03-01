@@ -1,0 +1,14 @@
+if [ -f libunistring-0.9.10.tar.xz ];then
+tar xf libunistring-0.9.10.tar.xz
+cd libunistring-0.9.10
+./configure --prefix=$PORTS_DEST --disable-static --docdir=$PORTS_DEST/share/doc/libunistring-0.9.10
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

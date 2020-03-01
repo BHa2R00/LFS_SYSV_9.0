@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/seamonkey
+rm -rfv $PORTS_DEST/lib/{seamonkey-2.49.4,seamonkey-devel-2.49.4}
+rm -rfv $PORTS_DEST/include/seamonkey-2.49.4
+rm -rfv $PORTS_DEST/share/idl/seamonkey-2.49.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

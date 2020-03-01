@@ -1,0 +1,15 @@
+#mkdir lib &&
+#cd lib &&
+#grep -v '^#' ../lib-7.md5 | awk '{print $2}' | wget -i- -c --no-check-certificate \
+#    -B https://www.x.org/pub/individual/lib/ &&
+#md5sum -c ../lib-7.md5
+for f in $(grep -v '^#' ./lib-7.md5 | awk '{print $2}')
+do
+	if [ ! -f $f ];then
+		wget -c --no-check-certificate https://www.x.org/pub/individual/lib/$f
+		#md5sum -c ../lib-7.md5 $f
+	fi
+done
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

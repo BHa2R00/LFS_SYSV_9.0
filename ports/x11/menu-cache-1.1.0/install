@@ -1,0 +1,14 @@
+if [ -f menu-cache-1.1.0.tar.xz ];then
+tar xf menu-cache-1.1.0.tar.xz
+cd menu-cache-1.1.0
+./configure --prefix=$PORTS_DEST --disable-static
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

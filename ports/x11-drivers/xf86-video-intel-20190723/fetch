@@ -1,0 +1,13 @@
+if [ ! -f xf86-video-intel-20190723.tar.xz ];then
+wget -c http://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/xf86-video-intel-20190723.tar.xz --no-check-certificate
+#wget -c ftp://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/xf86-video-intel-20190723.tar.xz --no-check-certificate
+fi
+if [ -f xf86-video-intel-20190723.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

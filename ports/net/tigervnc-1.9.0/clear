@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/{Xvnc,vncconfig,vncpasswd,vncserver,vncviewer,x0vncserver}
+rm -rfv $PORTS_DEST/lib/libvnc.so
+rm -rfv $PORTS_DEST/share/doc/tigervnc-1.9.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

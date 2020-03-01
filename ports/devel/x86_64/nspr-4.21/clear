@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/nspr-config
+rm -rfv $PORTS_DEST/lib/{libnspr4.so,libplc4.so,libplds4.so}
+rm -rfv $PORTS_DEST/include/nspr
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,20 @@
+if [ -f nspr-4.21.tar.gz ];then
+tar xf nspr-4.21.tar.gz
+cd nspr-4.21
+cd nspr                                                     &&
+sed -ri 's#^(RELEASE_BINS =).*#\1#' pr/src/misc/Makefile.in &&
+sed -i 's#$(LIBRARY) ##'            config/rules.mk         &&
+./configure --prefix=$PORTS_DEST \
+            --with-mozilla \
+            --with-pthreads \
+            $([ $(uname -m) = x86_64 ] && echo --enable-64bit) 
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

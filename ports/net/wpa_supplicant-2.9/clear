@@ -1,0 +1,4 @@
+rm -rfv /sbin/{wpa_supplicant,wpa_passphrase,wpa_cli}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

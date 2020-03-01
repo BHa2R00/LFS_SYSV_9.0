@@ -1,0 +1,8 @@
+rm -rfv $PORTS_DEST/bin/{p11-kit,trust,update-ca-certificates}
+rm -rfv $PORTS_DEST/lib/{libp11-kit.so,p11-kit-proxy.so,pkcs11}
+rm -rfv $PORTS_DEST/libexec/p11-kit
+rm -rfv $PORTS_DEST/include/p11-kit-1
+rm -rfv $PORTS_DEST/share/{gtk-doc/html/p11-kit,p11-kit}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

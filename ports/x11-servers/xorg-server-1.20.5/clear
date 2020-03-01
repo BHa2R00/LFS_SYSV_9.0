@@ -1,0 +1,9 @@
+rm -rfv $PORTS_DEST/bin/{cvt,gtf,X,Xnest,Xorg,Xvfb,dmxaddinput,dmxaddscreen,dmxinfo,dmxreconfig,dmxresize,dmxrminput,dmxrmscreen,dmxtodmx,dmxwininfo,vdltodmx,Xdmx,xdmxconfig,Xephyr,Xfbdev,Xwayland}
+rm -rfv $PORTS_DEST/lib/xorg/modules/{drivers,extensions}
+rm -rfv $PORTS_DEST/include/xorg
+rm -rfv $PORTS_DEST/lib/xorg
+rm -rfv $PORTS_DEST/share/X11/xorg.conf.d
+rm -rfv /var/lib/xkb
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

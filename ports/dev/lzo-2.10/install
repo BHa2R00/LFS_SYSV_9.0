@@ -1,0 +1,17 @@
+if [ -f lzo-2.10.tar.gz ];then
+tar xf lzo-2.10.tar.gz
+cd lzo-2.10
+./configure --prefix=$PORTS_DEST                   \
+            --enable-shared                  \
+            --disable-static                 \
+            --docdir=$PORTS_DEST/share/doc/lzo-2.10
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

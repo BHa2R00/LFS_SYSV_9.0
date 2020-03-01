@@ -1,4 +1,4 @@
 #!/bin/sh
-cmd='(port-pkg "T" "'$1'" "CLEAR")'
+cmd='(port-pkg "T" "'$1'" "clear")'
 echo $cmd | sbcl --noinform --no-sysinit --no-userinit --load ports.lisp
 echo ''

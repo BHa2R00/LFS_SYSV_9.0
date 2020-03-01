@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libfm-extra.so
+rm -rfv $PORTS_DEST/include/libfm*
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

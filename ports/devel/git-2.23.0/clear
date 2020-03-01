@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/git*
+rm -rfv $PORTS_DEST/share/perl5/Git
+rm -rfv $PORTS_DEST/libexec/git-core
+rm -rfv $PORTS_DEST/share/{doc/git-2.23.0,git-core,git-gui,gitk,gitweb}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{aconnect,alsaloop,alsamixer,alsatplg,alsaucm,amidi,amixer,aplay,aplaymidi,arecord,arecordmidi,aseqdump,iaseqnet,iecset,speaker-test}
+rm -rfv $PORTS_DEST/share/sounds/alsa
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf lsof_4.91
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf sunpinyin-2.0.4_pre20130108
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

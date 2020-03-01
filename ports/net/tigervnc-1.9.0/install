@@ -1,0 +1,39 @@
+if [ -f tigervnc-1.9.0.tar.gz ]&&[ -f xorg-server-1.20.4.tar.bz2 ];then
+tar xf tigervnc-1.9.0.tar.gz
+cd tigervnc-1.9.0
+export XORG_PREFIX="$PORTS_DEST"
+export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
+    --localstatedir=/var --disable-static"
+tar -xf ../xorg-server-1.20.4.tar.bz2 \
+    --strip-components=1              \
+    -C unix/xserver                   &&
+( cd unix/xserver &&
+  patch -Np1 -i ../xserver120.patch ) &&
+cmake -G "Unix Makefiles"         \
+      -DCMAKE_INSTALL_PREFIX=$PORTS_DEST \
+      -DCMAKE_BUILD_TYPE=Release  \
+      -Wno-dev
+make $PORTS_JOBS
+pushd unix/xserver && autoreconf -fiv
+  CFLAGS="$CFLAGS -I$PORTS_DEST/include/drm" \
+  ./configure $XORG_CONFIG            \
+      --disable-xwayland    --disable-dri        --disable-dmx         \
+      --disable-xorg        --disable-xnest      --disable-xvfb        \
+      --disable-xwin        --disable-xephyr     --disable-kdrive      \
+      --disable-devel-docs  --disable-config-hal --disable-config-udev \
+      --disable-unit-tests  --disable-selective-werror                 \
+      --disable-static      --enable-dri3                              \
+      --without-dtrace      --enable-dri2        --enable-glx          \
+      --with-pic
+  make $PORTS_JOBS
+popd
+make install
+( cd unix/xserver/hw/vnc && make install ) && [ -e $PORTS_DEST/bin/Xvnc ] || ln -svf $XORG_PREFIX/bin/Xvnc $PORTS_DEST/bin/Xvnc
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

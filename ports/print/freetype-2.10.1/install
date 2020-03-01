@@ -1,0 +1,20 @@
+if [ -f freetype-2.10.1.tar.xz ];then
+tar xf freetype-2.10.1.tar.xz
+cd freetype-2.10.1
+sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg
+sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
+    -i include/freetype/config/ftoption.h
+./configure --prefix=$PORTS_DEST --enable-freetype-config --disable-static
+make $PORTS_JOBS
+make install
+install -v -m755 -d $PORTS_DEST/share/doc/freetype-2.10.1
+cp -v -R docs/*     $PORTS_DEST/share/doc/freetype-2.10.1
+rm -v $PORTS_DEST/share/doc/freetype-2.10.1/freetype-config.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

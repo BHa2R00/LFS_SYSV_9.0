@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/include/GL
+rm -rfv $PORTS_DEST/include/X11
+rm -rfv $PORTS_DEST/share/doc/xorgproto-2019.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

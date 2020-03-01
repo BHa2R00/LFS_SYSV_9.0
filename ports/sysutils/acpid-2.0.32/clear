@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{acpid, acpi_listen,kacpimon}
+rm -rfv $PORTS_DEST/share/doc/acpid-2.0.32
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

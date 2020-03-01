@@ -1,0 +1,14 @@
+if [ -f giblib-1.2.4.tar.gz ];then
+tar xf giblib-1.2.4.tar.gz
+cd giblib-1.2.4
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

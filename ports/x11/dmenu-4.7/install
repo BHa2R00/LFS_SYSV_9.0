@@ -1,0 +1,14 @@
+if [ -f dmenu-4.7.tar.gz ];then
+tar xf dmenu-4.7.tar.gz
+cd dmenu-4.7
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

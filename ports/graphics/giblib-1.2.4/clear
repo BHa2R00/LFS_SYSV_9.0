@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/giblib-config
+rm -rfv $PORTS_DEST/lib/libgiblib*.so
+rm -rfv $PORTS_DEST/include/giblib/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

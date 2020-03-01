@@ -1,0 +1,16 @@
+if [ -f usbutils-012.tar.xz ];then
+tar xf usbutils-012.tar.xz
+cd usbutils-012
+./autogen.sh --prefix=$PORTS_DEST --datadir=$PORTS_DEST/share/hwdata
+make $PORTS_JOBS
+make install
+install -dm755 $PORTS_DEST/share/hwdata/
+#wget -c http://www.linux-usb.org/usb.ids -O $PORTS_DEST/share/hwdata/usb.ids
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

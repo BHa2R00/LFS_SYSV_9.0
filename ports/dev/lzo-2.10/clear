@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/liblzo2.so
+rm -rfv $PORTS_DEST/include/lzo
+rm -rfv $PORTS_DEST/share/doc/lzo
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

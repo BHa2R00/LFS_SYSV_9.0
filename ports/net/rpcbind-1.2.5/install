@@ -1,0 +1,24 @@
+if [ -f rpcbind-1.2.5.tar.bz2 ]&&[ -f rpcbind-1.2.5-vulnerability_fixes-1.patch ]&&[ -f blfs-bootscripts-20190609.tar.xz ];then
+tar xf rpcbind-1.2.5.tar.bz2
+tar xf blfs-bootscripts-20190609.tar.xz
+cd rpcbind-1.2.5
+sed -i "/servname/s:rpcbind:sunrpc:" src/rpcbind.c
+patch -Np1 -i ../rpcbind-1.2.5-vulnerability_fixes-1.patch
+./configure --prefix=$PORTS_DEST                                  \
+            --bindir=/sbin                                 \
+            --sbindir=/sbin                                \
+            --with-rpcuser=root                            \
+            --enable-warmstarts                            \
+            --without-systemdsystemunitdir
+make $PORTS_JOBS
+make install
+cd ../blfs-bootscripts-20190609
+make install-rpcbind
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

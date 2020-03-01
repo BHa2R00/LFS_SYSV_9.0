@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/bin/fcitx-config-gtk*
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf libvdpau-va-gl-0.4.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

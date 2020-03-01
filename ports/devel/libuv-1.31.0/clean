@@ -1,0 +1,4 @@
+rm -rf libuv-v1.31.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

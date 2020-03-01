@@ -1,0 +1,4 @@
+rm -rf which-2.21
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

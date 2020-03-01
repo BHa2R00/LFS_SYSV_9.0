@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{lame,mp3rtp}
+rm -rfv $PORTS_DEST/lib/libmp3lame.so
+rm -rfv $PORTS_DEST/include/lame
+rm -rfv $PORTS_DEST/share/doc/lame-3.100
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

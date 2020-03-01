@@ -1,0 +1,4 @@
+rm -rf blfs-bootscripts-20190609
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

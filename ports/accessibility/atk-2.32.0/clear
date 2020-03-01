@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libatk-1.0.so
+rm -rfv $PORTS_DEST/include/atk-1.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

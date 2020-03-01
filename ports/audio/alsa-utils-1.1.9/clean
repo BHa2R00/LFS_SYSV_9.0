@@ -1,0 +1,4 @@
+rm -rf alsa-utils-1.1.9
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

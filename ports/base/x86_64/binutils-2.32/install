@@ -1,0 +1,26 @@
+if [ -f binutils-2.32.tar.xz ];then
+tar xf binutils-2.32.tar.xz
+cd binutils-2.32
+expect -c "spawn ls"
+sed -i '/@\tincremental_copy/d' gold/testsuite/Makefile.in
+mkdir -v build
+cd build
+../configure --prefix=$PORTS_DEST       \
+             --enable-gold       \
+             --enable-ld=default \
+             --enable-plugins    \
+             --enable-shared     \
+             --disable-werror    \
+             --enable-64-bit-bfd \
+             --with-system-zlib
+make $PORTS_JOBS tooldir=$PORTS_DEST
+#make -k check
+make tooldir=$PORTS_DEST install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/bin/intel-virtual-output
+rm -rfv $PORTS_DEST/lib/libIntelXvMC.so
+rm -rfv $PORTS_DEST/lib/xorg/modules/drivers/intel_drv.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

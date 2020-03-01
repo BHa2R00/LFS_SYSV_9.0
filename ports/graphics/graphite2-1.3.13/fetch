@@ -1,0 +1,12 @@
+if [ ! -f graphite2-1.3.13.tgz ];then
+wget -c https://github.com/silnrsi/graphite/releases/download/1.3.13/graphite2-1.3.13.tgz --no-check-certificate
+fi
+if [ -f graphite2-1.3.13.tgz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

@@ -1,0 +1,12 @@
+if [ ! -f nasm-2.14.02.tar.xz ];then
+wget -c http://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.xz --no-check-certificate
+fi
+if [ -f nasm-2.14.02.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

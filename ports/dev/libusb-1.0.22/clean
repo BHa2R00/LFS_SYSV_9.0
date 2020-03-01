@@ -1,0 +1,4 @@
+rm -rf libusb-1.0.22
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

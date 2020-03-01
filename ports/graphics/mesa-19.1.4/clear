@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{glxgears,glxinfo}
+rm -rfv $PORTS_DEST/lib/{d3dadapter9.so,i915_dri.so,i965_dri.so,kms_swrast_dri.so,nouveau_dri.so,nouveau_drv_video.so,nouveau_vieux_dri.so,r200_dri.so,r300_dri.so,r600_dri.so,r600_drv_video.so,radeon_dri.so,radeonsi_dri.so,radeonsi_drv_video.so,swrast_dri.so,virtio_gpu_dri.so,vmwgfx_dri.so,libEGL.so,libGL.so,libGLESv1_CM.so,libGLESv2.so,libOSMesa.so,libXvMCnouveau.so,libXvMCr600.so,libgbm.so,libglapi.so,libvulkan_intel.so,libvulkan_radeon.so,libxatracker.so,libvdpau_nouveau.so,libvdpau_r300.so,libvdpau_r600.so,libvdpau_radeonsi.so,d3d,dri,vdpau}
+rm -rfv $PORTS_DEST/include/{EGL,GL,GLES,GLES2,GLES3,KHR,vulkan}
+rm -rfv $PORTS_DEST/share/{drirc.d,vulkan/icd.d}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

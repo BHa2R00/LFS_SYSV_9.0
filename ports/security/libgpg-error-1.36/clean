@@ -1,0 +1,4 @@
+rm -rf libgpg-error-1.36
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

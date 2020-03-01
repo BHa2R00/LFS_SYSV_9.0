@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{nettle-hash,nettle-lfib-stream,nettle-pbkdf2,pkcs1-conv,sexp-conv}
+rm -rfv $PORTS_DEST/lib/{libhogweed.so,libnettle.so}
+rm -rfv $PORTS_DEST/include/nettle
+rm -rfv $PORTS_DEST/share/doc/nettle-3.5.1
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

@@ -1,0 +1,4 @@
+rm -rf gst-plugins-base-1.16.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

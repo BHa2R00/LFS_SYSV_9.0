@@ -1,0 +1,12 @@
+if [ ! -f Mako-1.1.0.tar.gz ];then
+wget -c https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.1.0.tar.gz --no-check-certificate
+fi
+if [ -f Mako-1.1.0.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

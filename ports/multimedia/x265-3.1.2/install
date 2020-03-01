@@ -1,0 +1,17 @@
+if [ -f x265_3.1.2.tar.gz ];then
+tar xf x265_3.1.2.tar.gz
+cd x265_3.1.2
+mkdir bld &&
+cd    bld &&
+cmake -DCMAKE_INSTALL_PREFIX=$PORTS_DEST ../source
+make $PORTS_JOBS
+make install
+rm -vf $PORTS_DEST/lib/libx265.a
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

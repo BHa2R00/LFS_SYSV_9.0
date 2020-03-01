@@ -1,0 +1,14 @@
+if [ -f scons-3.1.1.tar.gz ];then
+tar xf scons-3.1.1.tar.gz
+cd scons-3.1.1
+sed -i 's/env python/&3/' script/scons*
+python3 setup.py install --prefix=$PORTS_DEST --standard-lib --optimize=1 --install-data=$PORTS_DEST/share
+rm -v $PORTS_DEST/bin/scons*.bat
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

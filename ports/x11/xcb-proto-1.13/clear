@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/share/xcb
+rm -rfv $PORTS_DEST/lib/python3.7/site-packages/xcbgen
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

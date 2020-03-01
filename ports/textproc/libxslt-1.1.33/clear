@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{xslt-config,xsltproc}
+rm -rfv $PORTS_DEST/lib/{libexslt.so,libxslt.so,libxsltmod.so,libxslt-plugins}
+rm -rfv $PORTS_DEST/include/{libexslt,libxslt}
+rm -rfv $PORTS_DEST/share/{doc/libxslt-1.1.33,doc/libxslt-python-1.1.33}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

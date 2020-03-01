@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{callgrind_annotate,callgrind_control,cg_annotate,cg_diff,cg_merge,ms_print,valgrind,valgrind-di-server,valgrind-listener,vgdb}
+rm -rfv $PORTS_DEST/lib/{libcoregrind-*,libreplacemalloc_toolpreload-*,libvex-*,libvexmultiarch-*,vgpreload_core-*,vgpreload_drd-*,vgpreload_exp-dhat-*,vgpreload_exp-sgcheck-*,vgpreload_helgrind-*,vgpreload_massif-*,vgpreload_memcheck-*,valgrind}
+rm -rfv $PORTS_DEST/include/valgrind
+rm -rfv $PORTS_DEST/share/doc/valgrind-3.15.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

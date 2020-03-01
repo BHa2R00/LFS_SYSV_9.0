@@ -1,0 +1,18 @@
+if [ -f libusb-1.0.22.tar.bz2 ];then
+tar xf libusb-1.0.22.tar.bz2
+cd libusb-1.0.22
+sed -i "s/^PROJECT_LOGO/#&/" doc/doxygen.cfg.in
+./configure --prefix=$PORTS_DEST --disable-static
+make -j1
+make install
+install -v -d -m755 $PORTS_DEST/share/doc/libusb-1.0.22/apidocs
+install -v -m644    doc/html/* \
+                    $PORTS_DEST/share/doc/libusb-1.0.22/apidocs
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

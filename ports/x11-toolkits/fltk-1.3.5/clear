@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{blocks,checkers,fltk-config,fluid,sudoku}
+rm -rfv $PORTS_DEST/lib/{libfltk.*,libfltk_forms.*,libfltk_gl.*,libfltk_images.*}
+rm -rfv $PORTS_DEST/include/FL
+rm -rfv $PORTS_DEST/share/doc/fltk-1.3.5
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

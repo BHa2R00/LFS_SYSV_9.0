@@ -1,0 +1,4 @@
+rm -rf libarchive-3.4.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

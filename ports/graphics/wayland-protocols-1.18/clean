@@ -1,0 +1,4 @@
+rm -rf wayland-protocols-1.18
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

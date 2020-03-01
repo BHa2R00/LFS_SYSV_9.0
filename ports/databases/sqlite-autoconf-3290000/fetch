@@ -1,0 +1,12 @@
+if [ ! -f sqlite-autoconf-3290000.tar.gz ];then
+wget -c https://sqlite.org/2019/sqlite-autoconf-3290000.tar.gz --no-check-certificate
+fi
+if [ -f sqlite-autoconf-3290000.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

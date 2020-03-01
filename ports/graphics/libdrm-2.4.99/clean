@@ -1,0 +1,4 @@
+rm -rf libdrm-2.4.99
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

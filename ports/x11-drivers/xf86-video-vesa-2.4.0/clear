@@ -1,0 +1,4 @@
+rm -rfv $PORTS_DEST/lib/xorg/modules/drivers/vesa_drv.so
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

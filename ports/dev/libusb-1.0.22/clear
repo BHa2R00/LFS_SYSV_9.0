@@ -1,0 +1,6 @@
+rm -rfv $PORTS_DEST/lib/libusb-1.0.so
+rm -rfv $PORTS_DEST/include/libusb-1.0
+rm -rfv $PORTS_DEST/share/doc/libusb-1.0.22
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

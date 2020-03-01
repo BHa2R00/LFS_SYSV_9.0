@@ -1,0 +1,14 @@
+if [ -f wireless_tools.29.tar.gz ];then
+tar xf wireless_tools.29.tar.gz
+cd wireless_tools.29
+patch -Np1 -i ../wireless_tools-29-fix_iwlist_scanning-1.patch
+make $PORTS_JOBS
+make PREFIX=/usr INSTALL_MAN=/usr/share/man install
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

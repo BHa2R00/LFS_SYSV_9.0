@@ -1,0 +1,4 @@
+rm -rf gnupg-2.2.17
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

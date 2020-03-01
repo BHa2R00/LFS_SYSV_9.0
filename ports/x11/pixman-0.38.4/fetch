@@ -1,0 +1,12 @@
+if [ ! -f pixman-0.38.4.tar.gz ];then
+wget -c https://www.cairographics.org/releases/pixman-0.38.4.tar.gz --no-check-certificate
+fi
+if [ -f pixman-0.38.4.tar.gz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

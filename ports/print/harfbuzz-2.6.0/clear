@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{hb-ot-shape-closure,hb-shape,hb-subset,hb-view}
+rm -rfv $PORTS_DEST/lib/{libharfbuzz*,cmake/harfbuzz}
+rm -rfv $PORTS_DEST/include/harfbuzz
+rm -rfv $PORTS_DEST/share/gtk-doc/html/harfbuzz
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

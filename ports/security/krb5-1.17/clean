@@ -1,0 +1,4 @@
+rm -rf krb5-1.17
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

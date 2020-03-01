@@ -1,0 +1,14 @@
+if [ -f icu4c-64_2-src.tgz ];then
+tar xf icu4c-64_2-src.tgz
+cd icu/source
+./configure --prefix=$PORTS_DEST
+make $PORTS_JOBS
+make install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

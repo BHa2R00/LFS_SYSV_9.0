@@ -1,0 +1,4 @@
+rm -rf libepoxy-1.5.3
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

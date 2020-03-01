@@ -1,0 +1,9 @@
+rm -rfv $PORTS_DEST/bin/{gss-client,gss-server,k5srvutil,kadmin,kadmin.local,kadmind,kdb5_ldap_util,kdb5_util,kdestroy,kinit,klist,kpasswd,kprop,kpropd,kproplog,krb5-config,krb5kdc,krb5-send-pr,ksu,kswitch,ktutil,kvno,sclient,sim_client,sim_server,sserver,uuclient,uuserver}
+rm -rfv $PORTS_DEST/lib/{libgssapi_krb5.so,libgssrpc.so,libk5crypto.so,libkadm5clnt_mit.so,libkadm5clnt.so,libkadm5srv_mit.so,libkadm5srv.so,libkdb_ldap.so,libkdb5.so,libkrad.so,libkrb5.so,libkrb5support.so,libverto.so,krb5}
+rm -rfv $PORTS_DEST/include/{gssapi,gssrpc,kadm5,krb5}
+rm -rfv $PORTS_DEST/share/{doc/krb5-1.17,examples/krb5}
+rm -rfv /var/lib/krb5kdc
+rm -rfv /var/lib/run/krb5kdc
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

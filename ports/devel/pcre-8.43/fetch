@@ -1,0 +1,13 @@
+if [ ! -f pcre-8.43.tar.bz2 ];then
+wget -c https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.bz2 --no-check-certificate
+#wget -c ftp://ftp.pcre.org/pub/pcre/pcre-8.43.tar.bz2 --no-check-certificate
+fi
+if [ -f pcre-8.43.tar.bz2 ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

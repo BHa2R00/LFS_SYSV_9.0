@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/bin/{ccmake,cmake,cmake-gui,cpack,and ctest}
+rm -rfv $PORTS_DEST/share/{cmake-3.15,doc/cmake-3.15.2}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

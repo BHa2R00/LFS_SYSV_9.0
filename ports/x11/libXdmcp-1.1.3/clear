@@ -1,0 +1,5 @@
+rm -rfv $PORTS_DEST/lib/libXdmcp.so
+rm -rfv $PORTS_DEST/share/doc/libXdmcp
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

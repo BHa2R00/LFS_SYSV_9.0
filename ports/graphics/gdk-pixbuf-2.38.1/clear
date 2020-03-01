@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{gdk-pixbuf-csource,gdk-pixbuf-pixdata,gdk-pixbuf-query-loaders,gdk-pixbuf-thumbnailer}
+rm -rfv $PORTS_DEST/lib/{libgdk_pixbuf-2.0.so,libgdk_pixbuf_xlib-2.0.so,gdk-pixbuf-2.0}
+rm -rfv $PORTS_DEST/include/gdk-pixbuf-2.0
+rm -rfv $PORTS_DEST/share/{installed-tests/gdk-pixbuf,gtk-doc/html/gdk-pixbuf,thumbnailers}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

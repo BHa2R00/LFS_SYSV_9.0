@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{a52dec,extract_a52}
+rm -rfv $PORTS_DEST/lib/liba52.so
+rm -rfv $PORTS_DEST/include/a52dec
+rm -rfv $PORTS_DEST/share/doc/liba52-0.7.4
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

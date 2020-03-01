@@ -1,0 +1,15 @@
+if [ -f Python-2.7.16.tar.xz ];then
+tar xf Python-2.7.16.tar.xz
+cd Python-2.7.16
+./configure --prefix=$PORTS_DEST --enable-shared --with-system-expat --with-system-ffi --with-ensurepip=yes --enable-unicode=ucs4
+make $PORTS_JOBS
+make install
+chmod -v 755 $PORTS_DEST/lib/libpython2.7.so.1.0
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

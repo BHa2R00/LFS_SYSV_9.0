@@ -1,0 +1,4 @@
+rm -rf libthai-0.1.28
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

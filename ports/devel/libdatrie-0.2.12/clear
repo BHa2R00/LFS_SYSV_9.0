@@ -1,0 +1,7 @@
+#rm -rfv $PORTS_DEST/bin/
+rm -rfv $PORTS_DEST/lib/libdatrie.so
+#rm -rfv $PORTS_DEST/include/
+#rm -rfv $PORTS_DEST/share/
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

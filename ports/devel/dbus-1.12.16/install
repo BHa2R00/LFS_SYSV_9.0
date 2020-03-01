@@ -1,0 +1,32 @@
+if [ -f dbus-1.12.16.tar.gz ]&&[ -f blfs-bootscripts-20190609.tar.xz ];then
+tar xf dbus-1.12.16.tar.gz
+tar xf blfs-bootscripts-20190609.tar.xz
+cd dbus-1.12.16
+./configure --prefix=$PORTS_DEST                 \
+            --sysconfdir=/etc                    \
+            --localstatedir=/var                 \
+            --enable-user-session                \
+            --disable-doxygen-docs               \
+            --disable-xml-docs                   \
+            --disable-static                     \
+            --with-systemduserunitdir=no         \
+            --with-systemdsystemunitdir=no       \
+            --docdir=$PORTS_DEST/share/doc/dbus-1.12.16 \
+            --with-console-auth-dir=/run/console \
+            --with-system-pid-file=/run/dbus/pid \
+            --with-system-socket=/run/dbus/system_bus_socket
+make $PORTS_JOBS
+make install
+mv -v $PORTS_DEST/lib/libdbus-1.so.* /lib &&
+ln -sfv ../../lib/$(readlink $PORTS_DEST/lib/libdbus-1.so) $PORTS_DEST/lib/libdbus-1.so
+ln -sv /var/lib/dbus/machine-id /etc
+cd ../blfs-bootscripts-20190609
+make install-dbus
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ./R
+fi

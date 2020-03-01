@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{g-ir-annotation-tool,g-ir-compiler,g-ir-doc-tool,g-ir-inspect,g-ir-generate,g-ir-scanner}
+rm -rfv $PORTS_DEST/lib/{libgirepository-1.0.so,_giscanner.cpython-37m*linux-gnu.so,girepository-1.0,gobject-introspection}
+rm -rfv $PORTS_DEST/include/gobject-introspection-1.0
+rm -rfv $PORTS_DEST/share/{gir-1.0,gobject-introspection-1.0}
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

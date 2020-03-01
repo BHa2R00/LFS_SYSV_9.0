@@ -1,0 +1,7 @@
+rm -rfv $PORTS_DEST/bin/{anthy-agent,anthy-dic-tool,anthy-morphological-analyzer}
+rm -rfv $PORTS_DEST/lib/libanthy.so
+rm -rfv $PORTS_DEST/include/anthy
+rm -rfv $PORTS_DEST/share/anthy
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R

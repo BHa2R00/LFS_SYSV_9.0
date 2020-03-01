@@ -1,0 +1,14 @@
+if [ -f feh-3.2.1.tar.bz2 ];then
+tar xf feh-3.2.1.tar.bz2
+cd feh-3.2.1
+sed -i "s:doc/feh:&-3.2.1:" config.mk
+make $PORTS_JOBS PREFIX=$PORTS_DEST
+make PREFIX=$PORTS_DEST install
+echo ''
+echo 'NIL'
+echo 'NIL' > ../R
+else
+echo ''
+echo 'BUILD-ERROR'
+echo 'BUILD-ERROR' > ../R
+fi

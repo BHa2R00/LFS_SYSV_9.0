@@ -1,0 +1,12 @@
+if [ ! -f libevdev-1.7.0.tar.xz ];then
+wget -c https://www.freedesktop.org/software/libevdev/libevdev-1.7.0.tar.xz --no-check-certificate
+fi
+if [ -f libevdev-1.7.0.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi

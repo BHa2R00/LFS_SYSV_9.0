@@ -1,0 +1,12 @@
+if [ ! -f gtk+-3.24.10.tar.xz ];then
+wget -c 'http://www.bha2r.xyz/LFS_SYSV_9.0/distfiles/gtk%2B-3.24.10.tar.xz' --no-check-certificate
+fi
+if [ -f gtk+-3.24.10.tar.xz ];then
+echo ''
+echo 'NIL'
+echo 'NIL' > ./R
+else
+echo ''
+echo 'GET-ERROR'
+echo 'GET-ERROR' > ./R
+fi
